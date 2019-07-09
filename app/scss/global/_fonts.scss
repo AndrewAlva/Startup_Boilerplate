@@ -5,6 +5,12 @@
 		url('../fonts/GothamBold.ttf') format('truetype');
 }
 @font-face {
+	font-family: 'Gotham_Medium';
+	font-display: auto;
+	src:url('../fonts/GothamMedium.woff') format('woff'),
+		url('../fonts/GothamMedium.ttf') format('truetype');
+}
+@font-face {
 	font-family: 'Gotham_Book';
 	font-display: auto;
 	src:url('../fonts/GothamBook.woff') format('woff'),
@@ -15,10 +21,4 @@
 	font-display: auto;
 	src:url('../fonts/GothamLight.woff') format('woff'),
 		url('../fonts/GothamLight.ttf') format('truetype');
-}
-@font-face {
-	font-family: 'Gotham_Medium';
-	font-display: auto;
-	src:url('../fonts/GothamMedium.woff') format('woff'),
-		url('../fonts/GothamMedium.ttf') format('truetype');
 }
