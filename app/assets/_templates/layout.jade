@@ -16,19 +16,27 @@ html(class='no-js')
 		meta(property="og:title" 		content="PLACE_YOUR_TITLE")
 		meta(property="og:description" 	content="PLACE_YOUR_DESCRIPTION")
 		meta(property="og:image" 		content="PLACE_YOUR_IMAGE_URL")
-		meta(name="twitter:card", content="summary")
+		meta(name="twitter:card", 		content="summary")
 
 		//- stylesheets
 		link(rel='stylesheet', href='css/app.css')
 
 	body
 		//- header
-		h1 Mbrt Brunch Boilerplate
-		h2 Built from scratch, no libraries yet.
+		header
+			figure
+			h1 melodia
 
 		//- content
 		#main-wrapper
 			block content
+
+		//- footer
+		footer
+			p
+				span © 2019 melodia. all rights reserved.
+				a(href="#") terms
+				a(href="#") privacy
 
 		//- scripts
 		script(src='js/app.js')
