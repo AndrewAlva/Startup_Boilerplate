@@ -3,7 +3,7 @@
 		font-family: 'Gotham_Bold';
 		font-size: 3.4em;
 		line-height: 1.2em;
-		margin-bottom: 4px;
+		margin-bottom: 5px;
 	}
 
 	p{
@@ -17,9 +17,12 @@
 	position: relative;
 	width: 100%;
 	color: #fff;
+		padding: 300px 0 250px;
 
 	.bg{
 		position: absolute;
+		top: 0;
+		left: 0;
 		width: 100%;
 		height: 100%;
 		background-color: $brand-blue;
@@ -28,28 +31,47 @@
 	h1{
 		font-family: 'Gotham_Bold';
 		font-size: 6.4em;
-		line-height: 1.5em;
+		line-height: 1em;
 		letter-spacing: -.05em;
-		height: 100px;
-		margin-bottom: 30px;
+		height: 110px;
+		margin-bottom: 17px;
 	}
 
 	h2{
 		font-family: 'Gotham_Bold';
 		font-size: 1.3em;
-		margin-bottom: 26px;
+		margin-bottom: 35px;
 	}
 }
 
 .divider{
 	position: relative;
 	width: 100%;
-	height: 75px;
-	background-color: $brand-blue;
+
+	img{
+		position: relative;
+		display: block;
+		margin: 0 auto;
+		width: 100%;
+		max-width: 904px;
+		vertical-align: top;
+	}
+}
+
+.bullet-section{
+	&.text-right{
+		padding-top: 200px;
+		padding-bottom: 250px;
+	}
+	&.text-left{
+		padding-top: 130px;
+		padding-bottom: 180px;
+	}
 }
 
 .cards-section{
 	margin-bottom: 100px;
+			padding-top: 90px;
 
 	._info{
 		text-align: center;
@@ -84,6 +106,50 @@
 				margin: auto;
 				left: 0; right: 0;
 				top: -54px;
+				width: 76px;
+				height: 76px;
+
+				&:before{
+					content: '';
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					border-radius: 30px;
+					background-color: $icon-blue;
+					@include rotate(12deg);
+					@include transform-origin(center, center);
+				}
+
+				svg{
+					position: absolute;
+
+					&:first-child{
+						margin: auto;
+						left: 0; right: 0;
+						top: 0; bottom: 0;
+					}
+
+					&.shuffle{
+						width: 34px;
+					}
+					&.list{
+						width: 37px;
+					}
+					&.playlists{
+						width: 33px;
+					}
+
+					&.dont{
+						top: -10px;
+						left: 1px;
+						width: 29px;
+						border-radius: 50%;
+						border: 1px solid #fff;
+						background-color: #fff;
+					}
+				}
 			}
 
 			p{
@@ -97,9 +163,12 @@
 .centered-section{
 	position: relative;
 	color: #fff;
+		padding-top: 110px;
 
 	.bg{
 		position: absolute;
+		top: 0;
+		left: 0;
 		width: 100%;
 		height: 100%;
 		background-color: $brand-blue;
@@ -112,12 +181,11 @@
 			font-family: 'Gotham_Bold';
 			font-size: 3.25em;
 			line-height: 1em;
-			margin-bottom: 9px;
+			margin-bottom: 30px;
 		}
 
 		p{
 			font-family: 'Gotham_Book';
-			// font-family: 'Gotham_Light';
 			font-size: 1.1em;
 			line-height: 1.45em;
 			margin-bottom: 33px;
@@ -129,7 +197,7 @@
 
 		.help{
 			font-family: 'Gotham_Medium';
-			// font-family: 'Gotham_Book';
+			font-size: .9em;
 
 			a{
 				position: relative;
@@ -141,7 +209,7 @@
 					opacity: .5;
 					position: absolute;
 					left: 0;
-					bottom: -3px;
+					bottom: 0px;
 					width: 100%;
 					height: 1px;
 					background-color: #fff;
@@ -152,6 +220,23 @@
 		.rrss{
 			li{
 				display: inline-block;
+				margin-bottom: 120px;
+
+				svg{
+					&.fb{
+						width: 12px;
+						margin-right: 53px;
+					}
+					&.tw{
+						width: 24px;
+						margin-right: 47px;
+					}
+					&.ig{
+						position: relative;
+						top: 3px;
+						width: 24px;
+					}
+				}
 			}
 		}
 	}

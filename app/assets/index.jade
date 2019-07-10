@@ -17,7 +17,7 @@ block content
 
 				.col-6.offset-1
 					.phones-wrapper
-						p I'm an iPhone
+						//- p I'm an iPhone
 
 
 	section.bullet-section.text-right
@@ -25,7 +25,7 @@ block content
 			.row
 				.col-7
 					.phones-wrapper
-						p I'm an iPhone
+						//- p I'm an iPhone
 
 				.col-5
 					._info
@@ -37,8 +37,8 @@ block content
 
 
 
-	div.divider
-		h1 –––––––––––––––––––––––––––––––––
+	figure.divider
+		img(src="img/division.png", alt="section divider")
 
 	section.bullet-section.text-left
 		.container
@@ -54,9 +54,9 @@ block content
 
 				.col-6
 					.phones-wrapper
-						p I'm an iPhone
-	div.divider
-		h1 –––––––––––––––––––––––––––––––––
+						//- p I'm an iPhone
+	figure.divider
+		img(src="img/division.png", alt="section divider")
 
 
 	section.cards-section
@@ -70,19 +70,25 @@ block content
 			.row.cards-container
 				.col-4
 					.card-wrap
-						figure._icon icon
+						figure._icon 
+							include _modules/svg/shuffle.jade
+							include _modules/svg/dont.jade
 						p 
 							span.blue-high stop 
 							|shuffle playing the same playlists.
 				.col-4
 					.card-wrap
-						figure._icon icon
+						figure._icon
+							include _modules/svg/list.jade
+							include _modules/svg/dont.jade
 						p 
 							span.blue-high stop 
 							|listening to the same songs and stations.
 				.col-4
 					.card-wrap
-						figure._icon icon
+						figure._icon
+							include _modules/svg/playlists.jade
+							include _modules/svg/dont.jade
 						p 
 							span.blue-high stop 
 							|constantly organizing your library and playlists.
@@ -96,7 +102,7 @@ block content
 			.row
 				.col-6
 					.phones-wrapper
-						p I'm an iPhone
+						//- p I'm an iPhone
 				.col-6
 					.closure-text
 						h4 melodia is free for everyone!
@@ -115,9 +121,13 @@ block content
 
 						ul.rrss
 							li
-								i fb
+								a(href="#" target="_blank")
+									include _modules/svg/rrss-fb.jade
 							li
-								i tw
+								a(href="#" target="_blank")
+									include _modules/svg/rrss-twitter.jade
 							li
-								i ig
+								a(href="#" target="_blank")
+									include _modules/svg/rrss-ig.jade
 
+		include _modules/footer.jade
