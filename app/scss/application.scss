@@ -13,5 +13,18 @@
 
 @import 'modules/header';
 @import 'modules/footer';
+@import 'modules/iphones';
 
-@import 'views/_home'
+@import 'views/_home';
+
+.test{
+	z-index: 999999999;
+	position: absolute;
+	background-color: rgba(255,0,0,.3);
+	pointer-events: none;
+
+	width: 235px;
+	height: 100%;
+	top: 0;
+	left: 0;
+}

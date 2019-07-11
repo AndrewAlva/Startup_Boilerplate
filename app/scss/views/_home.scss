@@ -17,7 +17,9 @@
 	position: relative;
 	width: 100%;
 	color: #fff;
-		padding: 300px 0 250px;
+	padding-top: 100px;
+	padding-bottom: 20px;
+	overflow: hidden;
 
 	.bg{
 		position: absolute;
@@ -28,6 +30,22 @@
 		background-color: $brand-blue;
 	}
 
+	.fg{
+		position: absolute;
+		bottom: -1px;
+		width: 100%;
+
+		svg{
+			width: 100.1%;
+			vertical-align: top;
+		}
+	}
+
+	._intro{
+		padding-top: 220px;
+		padding-left: 40px;
+	}
+
 	h1{
 		font-family: 'Gotham_Bold';
 		font-size: 6.4em;
@@ -35,12 +53,29 @@
 		letter-spacing: -.05em;
 		height: 110px;
 		margin-bottom: 17px;
+		margin-left: -5px;
 	}
 
 	h2{
 		font-family: 'Gotham_Bold';
 		font-size: 1.3em;
 		margin-bottom: 35px;
+	}
+
+	.phones-wrapper{
+		position: relative;
+		@include flexIt;
+		left: -30px;
+
+		.iphone-wrap{
+			&:not(:first-child){
+				margin-left: -85px;
+			}
+
+			&.black{
+				margin-top: 78px;
+			}
+		}
 	}
 }
 
@@ -60,18 +95,185 @@
 
 .bullet-section{
 	&.text-right{
-		padding-top: 200px;
-		padding-bottom: 250px;
+		border-top: 1px solid red;
+		position: relative;
+		margin-top: 55px;
+		margin-bottom: 113px;
+		// padding-top: 200px;
+		// padding-bottom: 250px;
+
+		.skewed-bg{
+			position: absolute;
+			top: 167px;
+			width: 100%;
+			height: 1973px;
+			background-color: #fff;
+			@include skew(0, -26deg);
+		}
 	}
 	&.text-left{
-		padding-top: 130px;
-		padding-bottom: 180px;
+		// padding-top: 130px;
+		// padding-bottom: 180px;
+	}
+
+	.illustration-wrap{
+		position: relative;
+		width: 569px;
+		height: 569px;
+
+		.bg{
+			position: relative;
+			width: 100%;
+			height: 100%;
+			margin-top: 28px;
+
+			.round-square{
+				width: 100%;
+				@include rotate(29.95deg);
+			}
+		}
+
+		.interface{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+
+			.dots-ring{
+				position: absolute;
+				margin: auto;
+				top: 0; bottom: 0;
+				left: 0; right: 0;
+				width: 465px;
+				height: 465px;
+			}
+
+			.phone{
+				position: absolute;
+				margin: auto;
+				top: 35px;
+				bottom: 0;
+				left: 0; right: 0;
+				width: 266px;
+				height: 465px;
+
+				.ui{
+					position: absolute;
+					margin: auto;
+					left: 0; right: 0;
+					top: 6%;
+				}
+			}
+		}
+
+		.album-covers{
+			position: absolute;
+			top: 120px;
+			left: 50%;
+			@include translate(-50%, 0)
+			bottom: 0;
+			margin: auto;
+			width: 662px;
+			height: 120px;
+			@include flexIt;
+			list-style: none;
+
+			.cover{
+				display: inline-block;
+				width: 162px;
+				margin: 0 6.5px;
+
+				img{
+					vertical-align: top;
+					border-radius: 6px;
+				}
+			}
+		}
+
+		.day-cicle{
+			position: absolute;
+			margin: auto;
+			top: 0; bottom: 0;
+			left: 0; right: 0;
+			width: 465px;
+			height: 465px;
+			border-radius: 50%;
+			@include rotate(35deg);
+
+			.bubble{
+				position: absolute;
+				margin: auto;
+				top: 0; bottom: 0;
+				width: 64px;
+				height: 64px;
+				border-radius: 50%;
+				background-color: #fff;
+				@include drawShadow(0,12px, 35px,0, rgba(0,0,0,.25));
+				@include rotate(-35deg);
+
+				&.day{
+					left: -30px;
+				}
+				&.night{
+					right: -30px;
+				}
+
+				figure{
+					position: absolute;
+					margin: auto;
+					top: 0; bottom: 0;
+					left: 0; right: 0;
+				}
+
+				.sun{
+					width: 38px;
+					height: 38px;
+					border-radius: 50%;
+					background-color: $sun-color;
+
+					&:before, &:after{
+						content: '';
+						position: absolute;
+						margin: auto;
+						top: 0; bottom: 0;
+						left: 0; right: 0;
+						border-radius: 50%;
+						background-color: #fff;
+						opacity: .13;
+					}
+
+					&:before{
+						width: 19px;
+						height: 19px;
+					}
+
+					&:after{
+						width: 29px;
+						height: 29px;
+					}
+				}
+
+				.moon{
+					width: 40px;
+					height: 41px;
+
+					svg{
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+
+	._info{
+		padding-top: 214px;
 	}
 }
 
 .cards-section{
 	margin-bottom: 100px;
-			padding-top: 90px;
+			// padding-top: 90px;
 
 	._info{
 		text-align: center;
@@ -163,7 +365,7 @@
 .centered-section{
 	position: relative;
 	color: #fff;
-		padding-top: 110px;
+		// padding-top: 110px;
 
 	.bg{
 		position: absolute;

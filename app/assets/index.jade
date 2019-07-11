@@ -1,35 +1,80 @@
 extends _templates/layout.jade
 
 block content
+	//- .test
 	section.hero-section
 		.bg
 		.container
 			.row
 				.col-5
-					h1 melodia
-					h2 a smarter music app.
-					button.cta-btn
-						figure.apple 
-							include _modules/svg/apple.jade
-						span._label get melodia
-						figure.arrow 
-							include _modules/svg/arrow.jade
+					._intro
+						h1 melodia
+						h2 a smarter music app.
+						button.cta-btn
+							figure.apple 
+								include _modules/svg/apple.jade
+							span._label get melodia
+							figure.arrow 
+								include _modules/svg/arrow.jade
 
-				.col-6.offset-1
+				.col-7
 					.phones-wrapper
-						//- p I'm an iPhone
+						figure.iphone-wrap.black
+							img(src="img/iPhone-black.png", alt="iPhone Mockup")
+							.ui
+								img(src="img/ui-hero-left.png", alt="Melodia App Interface")
+
+						figure.iphone-wrap.white
+							img(src="img/iPhone-white.png", alt="iPhone Mockup")
+							.ui
+								img(src="img/ui-hero-mid.png", alt="Melodia App Interface")
+
+						figure.iphone-wrap.black
+							img(src="img/iPhone-black.png", alt="iPhone Mockup")
+							.ui
+								img(src="img/ui-hero-right.png", alt="Melodia App Interface")
+		.fg
+			include _modules/svg/hero-wave.jade
+
 
 
 	section.bullet-section.text-right
+		.skewed-bg
 		.container
 			.row
 				.col-7
-					.phones-wrapper
-						//- p I'm an iPhone
+					.illustration-wrap
+						.bg
+							include _modules/svg/rounded-square.jade
+
+						.interface
+							include _modules/svg/dots-ring.jade
+							figure.phone
+								img.device(src="img/iphone-flat.png", alt="iPhone Device")
+								img.ui(src="img/ui-radio.png", alt="Melodia radio interface")
+
+						ul.album-covers
+							li.cover
+								img(src="https://www.fillmurray.com/120/120", alt="melodia app albums")
+							li.cover
+								img(src="https://www.fillmurray.com/120/120", alt="melodia app albums")
+							li.cover
+							li.cover
+								img(src="https://www.fillmurray.com/120/120", alt="melodia app albums")
+							li.cover
+								img(src="https://www.fillmurray.com/120/120", alt="melodia app albums")
+
+						.day-cicle
+							.day.bubble
+								figure.sun
+
+							.night.bubble
+								figure.moon
+									include _modules/svg/moon.jade
 
 				.col-5
 					._info
-						h3 
+						h3
 							|simple
 							br
 							|+ intelligent.
@@ -54,7 +99,7 @@ block content
 
 				.col-6
 					.phones-wrapper
-						//- p I'm an iPhone
+						p I'm an iPhone
 	figure.divider
 		img(src="img/division.png", alt="section divider")
 
@@ -102,7 +147,10 @@ block content
 			.row
 				.col-6
 					.phones-wrapper
-						//- p I'm an iPhone
+						figure.iphone-wrap.white
+							img(src="img/iPhone-white.png", alt="iPhone Mockup")
+							.ui
+								img(src="img/ui-hero-mid.png", alt="Melodia App Interface")
 				.col-6
 					.closure-text
 						h4 melodia is free for everyone!

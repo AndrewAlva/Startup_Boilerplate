@@ -54,6 +54,14 @@
 	transform: scale($X, $Y);
 }
 
+@mixin skew($X, $Y){
+	-webkit-transform: skew($X, $Y);
+	-moz-transform: skew($X, $Y);
+	-ms-transform: skew($X, $Y);
+	-o-transform: skew($X, $Y);
+	transform: skew($X, $Y);
+}
+
 @mixin transform-origin($X, $Y){
 	-webkit-transform-origin: $X $Y;
 	-ms-transform-origin: $X $Y;

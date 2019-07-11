@@ -1,0 +1,34 @@
+.iphone-wrap{
+	position: relative;
+	width: 390px;
+	height: 628px;
+
+	&.black{
+		.ui{
+			top: 8.6%;
+			right: 9.7%;
+		}
+	}
+
+	&.white{
+		z-index: 1;
+
+		.ui{
+			top: 7.7%;
+			right: 9.3%;
+		}
+	}
+
+	.ui{
+		position: absolute;
+		top: 8.6%;
+		right: 9.7%;
+		width: 234px;
+		height: 507px;
+		border-radius: 20px;
+
+		img{
+			width: 100%;
+		}
+	}
+}
