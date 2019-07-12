@@ -2,7 +2,7 @@ footer{
 	position: relative;
 	width: 100%;
 	text-align: center;
-	padding: 40px 0 62px;
+	padding: 38px 0 54px;
 
 	&:before{
 		content: '';
@@ -24,7 +24,7 @@ footer{
 	}
 
 	p{
-		font-family: 'Gotham_Book';
+		font-family: 'Gotham_Light';
 		font-size: .7em;
 		color: $brand-blue--down;
 
@@ -36,9 +36,9 @@ footer{
 			&:before{
 				content: '/';
 				display: inline-block;
-				font-family: 'Gotham_Book';
-				font-size: .7em;
-				margin-right: 12px;
+				font-family: 'Gotham_Light';
+				font-size: 1.1em;
+				margin-right: 13px;
 			}
 		}
 	}
