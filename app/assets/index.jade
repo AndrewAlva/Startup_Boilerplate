@@ -4,6 +4,8 @@ block content
 	//- .test
 	section.hero-section
 		.bg
+			include _modules/svg/notes.jade
+
 		.container
 			.row
 				.col-5
@@ -45,7 +47,7 @@ block content
 				.col-7
 					.illustration-wrap
 						.bg
-							include _modules/svg/rounded-square.jade
+							include _modules/svg/rounded-square-shaded.jade
 
 						.interface
 							include _modules/svg/dots-ring.jade
@@ -98,8 +100,65 @@ block content
 						p with its advanced AI and machine learning algorithms, melodia dynamically curates the right flow of songs that best match your taste and moment.
 
 				.col-6
-					.phones-wrapper
-						p I'm an iPhone
+					.illustration-wrap
+						.bg
+							include _modules/svg/rounded-square.jade
+
+						.interface
+							.br-code
+								include _modules/svg/code.jade
+							.tr-code
+								include _modules/svg/code.jade
+							.left-code
+								include _modules/svg/code.jade
+
+							figure.sine-graph
+								img(src="img/graph.png", alt="Data graph")
+
+							figure.blurred-phone
+								img(src="img/blurred-iphone.png", alt="iPhone Device")
+
+							figure.poly-graph
+								img(src="img/dashboard-graph2.png", alt="Data graph")
+
+							figure.circle-graph
+								img(src="img/circles-graph.png", alt="Circle data graph")
+
+							figure.singers-graph
+								//- include _modules/svg/singers-graph.jade
+								img.graphs(src="img/singers-graphs.png", alt="Circle data graph")
+
+								.faces-container
+									.face-component.sm.first
+										._face
+											img(src="img/artists/Shawn_Mendes.jpg", alt="portrait")
+										._line
+										._graph-dot
+
+									.face-component.second
+										._face
+											img(src="img/artists/U2.jpg", alt="portrait")
+										._line
+										._graph-dot
+
+									.face-component.third
+										._face
+											img(src="img/artists/Katy_Perry.jpg", alt="portrait")
+										._line
+										._graph-dot
+
+									.face-component.fourth
+										._face
+											img(src="img/artists/Ed_Sheeran.jpg", alt="portrait")
+										._line
+										._graph-dot
+
+									.face-component.sm.fifth
+										._face
+											img(src="img/artists/Taylor_Swift.jpg", alt="portrait")
+										._line
+										._graph-dot
+
 	figure.divider
 		img(src="img/division.png", alt="section divider")
 
@@ -142,10 +201,12 @@ block content
 
 	section.centered-section
 		.bg
+			include _modules/svg/notes.jade
+			include _modules/svg/closure-wave.jade
 
 		.container
 			.row
-				.col-6
+				.col-4.offset-2
 					.phones-wrapper
 						figure.iphone-wrap.white
 							img(src="img/iPhone-white.png", alt="iPhone Mockup")
@@ -168,10 +229,10 @@ block content
 							a(href="#") contact us now.
 
 						ul.rrss
-							li
+							li.fb
 								a(href="#" target="_blank")
 									include _modules/svg/rrss-fb.jade
-							li
+							li.tw
 								a(href="#" target="_blank")
 									include _modules/svg/rrss-twitter.jade
 							li
