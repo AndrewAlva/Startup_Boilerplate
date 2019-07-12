@@ -145,23 +145,27 @@
 	}
 	&.text-left{
 		z-index: 3;
-		margin-top: 57px;
-		margin-bottom: 116px;
+		margin-top: 37px;
+		margin-bottom: 90px;
 		padding-bottom: 30px;
 		overflow: hidden;
 
 		.illustration-wrap{
 			width: 591px;
 			height: 591px;
+			left: 50px;
+
 			.bg{
 				.round-square{
-					@include rotate(-10deg);
+					@include rotate(-12deg);
 				}
 			}
 		}
 
 		._info{
-			padding-top: 70px;
+			position: relative;
+			padding-top: 90px;
+			left: 67px;
 
 			p{
 				padding-right: 20.6%;
@@ -171,6 +175,7 @@
 
 	.illustration-wrap{
 		position: relative;
+		left: 43px;
 
 		.bg{
 			position: relative;
@@ -225,26 +230,28 @@
 
 			.br-code{
 				width: 49px;
-				bottom: 180px;
-				right: 100px;
-				opacity: .85;
+				bottom: 168px;
+				right: 95px;
+				// opacity: .85;
 			}
 			.tr-code{
-				width: 49px;
-				top: 143px;
-				right: 140px;
-				opacity: .3;
+				width: 59px;
+				top: 170px;
+				right: 150px;
+				// opacity: .3;
+				mix-blend-mode: soft-light;
 			}
 			.left-code{
-				width: 72px;
-				left: 77px;
-				bottom: 200px;
-				opacity: .3;
+				width: 82px;
+				left: 58px;
+				bottom: 188px;
+				// opacity: .3;
+				mix-blend-mode: soft-light;
 			}
 
 			.sine-graph{
 				position: absolute;
-				left: 110px;
+				left: 130px;
 				bottom: 130px;
 				width: 117px;
 				@include blur(2px);
@@ -258,17 +265,18 @@
 			.blurred-phone{
 				position: absolute;
 				margin: auto;
-				top: 60px;
+				top: 80px;
 				bottom: 0;
-				left: 0; right: 0;
+				left: 30px;
+				right: 0;
 				width: 161px;
 				height: 311px;
 			}
 
 			.poly-graph{
 				position: absolute;
-				right: 127px;
-				bottom: 189px;
+				right: 117px;
+				bottom: 175px;
 				width: 186px;
 
 				img{width: 100%;}
@@ -276,8 +284,8 @@
 
 			.circle-graph{
 				position: absolute;
-				right: 71px;
-				bottom: 279px;
+				right: 61px;
+				bottom: 270px;
 				width: 110px;
 				height: 110px;
 
@@ -303,8 +311,8 @@
 
 			.singers-graph{
 				position: absolute;
-				top: 115px;
-				left: -55px;
+				top: 135px;
+				left: -45px;
 				width: 373px;
 				height: 224px;
 				border-radius: 15px;
@@ -410,7 +418,7 @@
 								width: 100%;
 								height: 100%;
 								border-radius: 50%;
-								opacity: .5;
+								opacity: .2;
 							}
 							&:after{
 								width: 8px;
