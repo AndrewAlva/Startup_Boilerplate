@@ -17,7 +17,7 @@
 	position: relative;
 	width: 100%;
 	color: #fff;
-	padding-top: 100px;
+	padding-top: 95px;
 	padding-bottom: 20px;
 	overflow: hidden;
 
@@ -32,9 +32,9 @@
 		.notes{
 			position: absolute;
 			margin: auto;
-			top: 123px;
-			left: 0;
-			right: 48px;
+			top: 120px;
+			left: 40px;
+			right: 0;
 			width: 457px;
 			opacity: .55;
 			mix-blend-mode: soft-light;
@@ -45,6 +45,7 @@
 		position: absolute;
 		bottom: -1px;
 		width: 100%;
+		pointer-events: none;
 
 		svg{
 			width: 100.1%;
@@ -53,7 +54,7 @@
 	}
 
 	._intro{
-		padding-top: 220px;
+		padding-top: 225px;
 		padding-left: 40px;
 	}
 
@@ -80,7 +81,7 @@
 
 		.iphone-wrap{
 			&:not(:first-child){
-				margin-left: -85px;
+				margin-left: -86px;
 			}
 
 			&.black{
