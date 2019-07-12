@@ -374,8 +374,12 @@
 							@include drawShadow(0,10px,20px,0,rgba(0,0,0,.65));
 
 							img{
-								width: 100%;
+								// width: 100%;
 								border-radius: 50%;
+								position: absolute;
+								margin: auto;
+								top: 0; bottom: 0;
+								left: 0; right: 0;
 							}
 
 							&:after{
@@ -464,6 +468,10 @@
 				margin: 0 6.5px;
 
 				img{
+					position: relative;
+					margin: 0 auto;
+					width: 100%;
+					max-width: 120px;
 					vertical-align: top;
 					border-radius: 6px;
 					@include drawShadow(0, 12px, 25px, 0px, rgba(0, 0, 0, 0.25));
