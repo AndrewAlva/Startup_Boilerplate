@@ -3,7 +3,7 @@
 		font-family: 'Gotham_Bold';
 		font-size: 3.4em;
 		line-height: 1.2em;
-		margin-bottom: 5px;
+		margin-bottom: 15px;
 	}
 
 	p{
@@ -118,7 +118,7 @@
 
 		.skewed-bg{
 			position: absolute;
-			top: 167px;
+			top: 177px;
 			width: 100%;
 			height: 1973px;
 			background-color: #fff;
@@ -128,6 +128,7 @@
 		.illustration-wrap{
 			width: 569px;
 			height: 569px;
+			left: 18px;
 
 			.bg{
 				.round-square{
@@ -137,7 +138,9 @@
 		}
 
 		._info{
-			padding-top: 214px;
+			position: relative;
+			padding-top: 210px;
+			left: 40px;
 		}
 	}
 	&.text-left{
@@ -199,7 +202,7 @@
 			.phone{
 				position: absolute;
 				margin: auto;
-				top: 35px;
+				top: 32px;
 				bottom: 0;
 				left: 0; right: 0;
 				width: 266px;
@@ -436,7 +439,7 @@
 
 		.album-covers{
 			position: absolute;
-			top: 120px;
+			top: 118px;
 			left: 50%;
 			@include translate(-50%, 0)
 			bottom: 0;
