@@ -43,13 +43,21 @@
 
 	.fg{
 		position: absolute;
-		bottom: -1px;
+		top: 0;
+		left: 0;
 		width: 100%;
+		height: 100%;
 		pointer-events: none;
 
 		svg{
-			width: 100.1%;
 			vertical-align: top;
+			position: absolute;
+			bottom: -1px;
+			left: 50%;
+			@include translate(-50%, 0);
+			width: 100.1%;
+			min-width: 1610px;
+			pointer-events: none;
 		}
 	}
 
@@ -116,21 +124,42 @@
 		z-index: 2;
 		position: relative;
 		margin-top: 55px;
-		margin-bottom: 113px;
+		margin-bottom: 50px;
+
+		@include desktop-width {
+			margin-bottom: 113px;
+		}
 
 		.skewed-bg{
 			position: absolute;
 			top: 175px;
 			width: 100%;
-			height: 1964px;
+			height: 1784px;
 			background-color: #fff;
 			@include skew(0, -26deg);
+
+			@include desktop-width {
+				height: 1964px;
+			}
 		}
 
 		.illustration-wrap{
 			width: 569px;
 			height: 569px;
 			left: 14px;
+				transform: scale(0.8);
+				transform-origin: top;
+				top: 34px;
+
+			// @include laptop-md-width {
+			// 	transform: scale(0.8);
+			// 	transform-origin: top;
+			// 	top: 34px;
+			// }
+			@include desktop-width {
+				transform: scale(1);
+				top: 0;
+			}
 
 			.bg{
 				.round-square{
@@ -141,26 +170,49 @@
 
 		._info{
 			position: relative;
-			padding-top: 210px;
-			left: 40px;
+			padding-top: 170px;
+
+			@include desktop-width {
+				left: 40px;
+				padding-top: 210px;
+			}
 
 			h3{
 				position: relative;
 				left: -4px;
+			}
+
+			p{
+				width: 80%;
+				@include desktop-width {
+					width: 100%;
+				}
 			}
 		}
 	}
 	&.text-left{
 		z-index: 3;
 		margin-top: 37px;
-		margin-bottom: 90px;
 		padding-bottom: 30px;
 		overflow: hidden;
+
+		@include desktop-width {
+			margin-bottom: 90px;
+		}
 
 		.illustration-wrap{
 			width: 591px;
 			height: 591px;
-			left: 50px;
+			left: 0;
+				transform: scale(0.8);
+				transform-origin: top;
+				top: 34px;
+
+				@include desktop-width {
+					transform: scale(1);
+					top: 0;
+					left: 50px;
+				}
 
 			.bg{
 				.round-square{
@@ -174,7 +226,11 @@
 		._info{
 			position: relative;
 			padding-top: 90px;
-			left: 71px;
+			left: 60px;
+
+			@include desktop-width {
+				left: 71px;
+			}
 
 			p{
 				padding-right: 20.6%;
@@ -586,31 +642,53 @@
 		p{
 			position: relative;
 			margin: 0 auto;
-			width: 90%;
+			width: 70%;
 			max-width: 920px;
+
+			@include desktop-width {
+				width: 90%;
+			}
 		}
 	}
 
 	.cards-container{
+		width: 90%;
+		margin: 0 auto;
+		font-size: 0.9em;
+
+		@include desktop-width {
+			width: 100%;
+			font-size: 1em;
+		}
+
 		[class*="col-"]{
 			padding: 0 8px;
 		}
 		.card-wrap{
 			position: relative;
-			padding: 62px 32px 40px;
+			padding: 52px 15px 30px;
 			text-align: center;
 			border-radius: 15px;
 			border: 1px solid #e4e4e4;
 			background-color: #fff;
 			@include drawShadow(0, 15px, 45px, 0px, rgba(0, 0, 0, 0.08));
 
+			@include desktop-width {
+				padding: 62px 32px 40px;
+			}
+
 			._icon{
 				position: absolute;
 				margin: auto;
 				left: 0; right: 0;
 				top: -43px;
-				width: 76px;
-				height: 76px;
+				width: 68px;
+				height: 68px;
+
+				@include desktop-width {
+					width: 76px;
+					height: 76px;
+				}
 
 				&:before{
 					content: '';
@@ -619,11 +697,15 @@
 					left: 0;
 					width: 100%;
 					height: 100%;
-					border-radius: 30px;
+					border-radius: 25px;
 					background-color: $icon-blue;
 					@include rotate(12deg);
 					@include transform-origin(center, center);
 					@include drawShadow(4px,12px,25px,0,rgba(0,0,0,.20));
+
+					@include desktop-width {
+						border-radius: 30px;
+					}
 				}
 
 				svg{
@@ -636,13 +718,22 @@
 					}
 
 					&.shuffle{
-						width: 34px;
+						width: 30px;
+						@include desktop-width {
+							width: 34px;
+						}
 					}
 					&.list{
-						width: 37px;
+						width: 32px;
+						@include desktop-width {
+							width: 37px;
+						}
 					}
 					&.playlists{
-						width: 33px;
+						width: 29px;
+						@include desktop-width {
+							width: 33px;
+						}
 					}
 
 					&.dont{
@@ -694,8 +785,10 @@
 		.closure-wave{
 			position: absolute;
 			top: 0;
-			left: 0;
+			left: 50%;
+			@include translate(-50%,0);
 			width: 100.08%;
+			min-width: 1610px;
 			display: block;
 		}
 	}
@@ -713,9 +806,13 @@
 
 	.closure-text{
 		position: relative;
-		left: -12px;
+		left: 30px;
 		width: 370px;
 		padding-top: 35px;
+
+		@include desktop-width {
+			left: -12px;
+		}
 
 		h4{
 			font-family: 'Gotham_Bold';

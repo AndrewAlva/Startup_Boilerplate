@@ -1,3 +1,26 @@
+$laptop-sm-width: 992px;
+$laptop-md-width: 1200px;
+$desktop-width: 1440px;
+
+@mixin laptop-sm-width{
+	@media (min-width: #{$laptop-sm-width}) {
+		@content;
+	}
+}
+
+@mixin laptop-md-width{
+	@media (min-width: #{$laptop-md-width}) {
+		@content;
+	}
+}
+
+@mixin desktop-width{
+	@media (min-width: #{$desktop-width}) {
+		@content;
+	}
+}
+
+
 @mixin border-box{
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
