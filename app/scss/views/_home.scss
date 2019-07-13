@@ -32,8 +32,8 @@
 		.notes{
 			position: absolute;
 			margin: auto;
-			top: 120px;
-			left: 40px;
+			top: 123px;
+			left: 46px;
 			right: 0;
 			width: 457px;
 			opacity: .55;
@@ -143,6 +143,11 @@
 			position: relative;
 			padding-top: 210px;
 			left: 40px;
+
+			h3{
+				position: relative;
+				left: -4px;
+			}
 		}
 	}
 	&.text-left{
@@ -169,7 +174,7 @@
 		._info{
 			position: relative;
 			padding-top: 90px;
-			left: 67px;
+			left: 71px;
 
 			p{
 				padding-right: 20.6%;
@@ -566,7 +571,7 @@
 .cards-section{
 	z-index: 4;
 	position: relative;
-	padding-top: 90px;
+	padding-top: 89px;
 	padding-bottom: 97px;
 
 	._info{
@@ -591,7 +596,7 @@
 		}
 		.card-wrap{
 			position: relative;
-			padding: 60px 32px 40px;
+			padding: 62px 32px 40px;
 			text-align: center;
 			border-radius: 15px;
 			border: 1px solid #e4e4e4;
@@ -746,7 +751,7 @@
 					opacity: .5;
 					position: absolute;
 					left: 0;
-					bottom: 1px;
+					bottom: -1px;
 					width: 100%;
 					height: 1px;
 					background-color: #fff;
@@ -768,11 +773,11 @@
 					&.tw{
 						position: relative;
 						width: 24px;
-						top: -1px;
+						top: -3px;
 					}
 					&.ig{
 						position: relative;
-						top: 3px;
+						top: 1px;
 						width: 24px;
 					}
 				}
