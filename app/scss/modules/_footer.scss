@@ -33,6 +33,7 @@ footer{
 			margin-left: 12px;
 			color: inherit;
 			text-decoration: none;
+			@include transitions-ease(.3s);
 
 			&:before{
 				content: '/';
@@ -40,6 +41,10 @@ footer{
 				font-family: 'Gotham_Light';
 				font-size: 1.1em;
 				margin-right: 13px;
+			}
+
+			&:hover{
+				color: $brand-yellow;
 			}
 		}
 	}

@@ -76,7 +76,7 @@ block content
 									include _modules/svg/moon.jade
 
 				.col-5.offset-2.offset-xl-0
-					._info
+					._info.inview
 						h3
 							|simple
 							br
@@ -85,14 +85,14 @@ block content
 
 
 
-	figure.divider
+	figure.divider.inview
 		img(src="img/division.png", alt="section divider")
 
 	section.bullet-section.text-left
 		.container
 			.row
 				.col-6
-					._info
+					._info.inview
 						h3 
 							|it 
 							span.blue-high learns 
@@ -102,31 +102,30 @@ block content
 
 				.col-6
 					.illustration-wrap
-						.bg
+						.bg.inview
 							include _modules/svg/rounded-square.jade
 
 						.interface
-							.br-code
+							.br-code.inview
 								include _modules/svg/code.jade
-							.tr-code
+							.tr-code.inview
 								include _modules/svg/code.jade
-							.left-code
+							.left-code.inview
 								include _modules/svg/code.jade
 
-							figure.sine-graph
+							figure.sine-graph.inview
 								img(src="img/graph.png", alt="Data graph")
 
-							figure.blurred-phone
+							figure.blurred-phone.inview
 								img(src="img/blurred-iphone.png", alt="iPhone Device")
 
-							figure.poly-graph
+							figure.poly-graph.inview
 								img(src="img/dashboard-graph2.png", alt="Data graph")
 
-							figure.circle-graph
+							figure.circle-graph.inview
 								img(src="img/circles-graph.png", alt="Circle data graph")
 
-							figure.singers-graph
-								//- include _modules/svg/singers-graph.jade
+							figure.singers-graph.inview
 								img.graphs(src="img/singers-graphs.png", alt="Circle data graph")
 
 								.faces-container
@@ -160,7 +159,7 @@ block content
 										._line
 										._graph-dot
 
-	figure.divider
+	figure.divider.inview
 		img(src="img/division.png", alt="section divider")
 
 
@@ -168,13 +167,13 @@ block content
 		.container
 			.row
 				.col-12
-					._info
+					._info.inview
 						h3 why melodia?
 						p melodia brings you a smarter and simpler radio, providing you with the kind of variety and flow that matches your unique taste.
 
 			.row.cards-container
 				.col-4
-					.card-wrap
+					.card-wrap.inview
 						figure._icon 
 							include _modules/svg/shuffle.jade
 							include _modules/svg/dont.jade
@@ -182,7 +181,7 @@ block content
 							span.blue-high stop 
 							|shuffle playing the same playlists.
 				.col-4
-					.card-wrap
+					.card-wrap.inview
 						figure._icon
 							include _modules/svg/list.jade
 							include _modules/svg/dont.jade
@@ -192,7 +191,7 @@ block content
 							br
 							|same songs and stations.
 				.col-4
-					.card-wrap
+					.card-wrap.inview
 						figure._icon
 							include _modules/svg/playlists.jade
 							include _modules/svg/dont.jade
@@ -203,29 +202,30 @@ block content
 
 
 	section.centered-section
-		.bg
+		.bg.inview
 			include _modules/svg/notes.jade
 			include _modules/svg/closure-wave.jade
 
 		.container
 			.row
 				.col-4.offset-1.offset-xl-2
-					.phones-wrapper
+					.phones-wrapper.inview
 						figure.iphone-wrap.white
 							img(src="img/iPhone-white.png", alt="iPhone Mockup")
 							.ui
 								img(src="img/ui-hero-mid2.png", alt="Melodia App Interface")
 				.col-6
-					.closure-text
+					.closure-text.inview
 						h4 melodia is free for everyone!
 						p download melodia now and get access to over 
 							span.bold-high 40 million songs.
-						button.cta-btn
-							figure.apple 
-								include _modules/svg/apple.jade
-							span._label get melodia
-							figure.arrow 
-								include _modules/svg/arrow.jade
+						.btn
+							button.cta-btn
+								figure.apple 
+									include _modules/svg/apple.jade
+								span._label get melodia
+								figure.arrow 
+									include _modules/svg/arrow.jade
 
 						p.help
 							span.blue-down questions? 

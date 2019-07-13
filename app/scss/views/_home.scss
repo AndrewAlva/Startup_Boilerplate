@@ -11,6 +11,23 @@
 		font-size: 1.35em;
 		line-height: 1.5em;
 	}
+
+	&.inview{
+		h3, p{
+			opacity: 0;
+			@include translate(0,30px);
+		}
+
+		h3{@include trans-ease-delay(.7s, .4s);}
+		p{@include trans-ease-delay(.7s, .7s);}
+
+		&.in-view{
+			h3, p{
+				opacity: 1;
+				@include translate(0,0);
+			}
+		}
+	}
 }
 
 .hero-section{
@@ -150,7 +167,7 @@
 		&.inview{
 			figure{
 				opacity: 0;
-				@include translate(0,20px);
+				@include translate(0,30px);
 				@include transitions-ease(.6s);
 			}
 
@@ -159,9 +176,9 @@
 					opacity: 1;
 					@include translate(0,0);
 
-					&:first-child{@include trans-ease-delay(.6s, 0.6s);}
-					&:nth-child(2){@include trans-ease-delay(.6s, 0.45s);}
-					&:last-child{@include trans-ease-delay(.6s, 0.75s);}
+					&:first-child{@include trans-ease-delay(1.2s, 0.6s);}
+					&:nth-child(2){@include trans-ease-delay(2s, 0.45s);}
+					&:last-child{@include trans-ease-delay(1.2s, 0.75s);}
 				}
 			}
 		}
@@ -181,6 +198,17 @@
 		width: 100%;
 		max-width: 904px;
 		vertical-align: top;
+	}
+
+	&.inview{
+		opacity: 0;
+		@include translate(0,30px);
+		@include transitions-ease(.7s);
+
+		&.in-view{
+			opacity: 1;
+			@include translate(0,0);
+		}
 	}
 }
 
@@ -263,7 +291,8 @@
 			.interface.inview{
 				svg{
 					opacity: 0;
-					@include trans-ease-delay(.7s, 1.8s);
+					@include trans-ease-delay(.7s, 1.2s);
+					animation: dotsRing 120s ease-out .4s infinite alternate;
 				}
 
 				.phone{
@@ -290,21 +319,21 @@
 					
 					&:first-child{
 						@include translate(90px,0);
-						@include trans-ease-delay(.8s, 1.7s);
+						@include trans-ease-delay(.8s, 1.3s);
 					}
 					&:nth-child(2){
 						z-index: 1;
 						@include translate(40px,0);
-						@include trans-ease-delay(.8s, 1.6s);
+						@include trans-ease-delay(.8s, 1.2s);
 					}
 					&:nth-child(4){
 						z-index: 1;
 						@include translate(-40px,0);
-						@include trans-ease-delay(.8s, 1.6s);
+						@include trans-ease-delay(.8s, 1.2s);
 					}
 					&:nth-child(5){
 						@include translate(-90px,0);
-						@include trans-ease-delay(.8s, 1.7s);
+						@include trans-ease-delay(.8s, 1.3s);
 					}
 				}
 
@@ -320,7 +349,7 @@
 				.bubble{
 					opacity: 0;
 					@include scale(.8,.8);
-					@include trans-ease-delay(1s, 2s);
+					@include trans-ease-delay(1s, 1.4s);
 				}
 
 				&.in-view{
@@ -387,7 +416,22 @@
 				.round-square{
 					position: absolute;
 					left: -5px;
-					@include rotate(-12deg);
+					// @include rotate(-12deg);
+				}
+
+				&.inview{
+					svg{
+						opacity: 0;
+						@include rotate(-32deg);
+						@include trans-ease-delay(.7s, 0s);
+					}
+
+					&.in-view{
+						svg{
+							opacity: 1;
+							@include rotate(-12deg);
+						}
+					}
 				}
 			}
 		}
@@ -469,6 +513,16 @@
 				bottom: 164px;
 				right: 93px;
 				// opacity: .85;
+				&.inview{
+					opacity: 0;
+					@include scale(.6,.6);
+					@include trans-ease-delay(.9s, 0.2s);
+
+					&.in-view{
+						opacity: 1;
+						@include scale(1,1);
+					}
+				}
 			}
 			.tr-code{
 				width: 59px;
@@ -476,6 +530,16 @@
 				right: 150px;
 				// opacity: .3;
 				mix-blend-mode: soft-light;
+				&.inview{
+					opacity: 0;
+					@include scale(.6,.6);
+					@include trans-ease-delay(.9s, 0.3s);
+
+					&.in-view{
+						opacity: 1;
+						@include scale(1,1);
+					}
+				}
 			}
 			.left-code{
 				width: 82px;
@@ -483,6 +547,16 @@
 				bottom: 185px;
 				// opacity: .3;
 				mix-blend-mode: soft-light;
+				&.inview{
+					opacity: 0;
+					@include scale(.6,.6);
+					@include trans-ease-delay(.9s, 0.5s);
+
+					&.in-view{
+						opacity: 1;
+						@include scale(1,1);
+					}
+				}
 			}
 
 			.sine-graph{
@@ -496,6 +570,17 @@
 				img{
 					width: 100%;
 				}
+
+				&.inview{
+					opacity: 0;
+					@include scale(.6,.6);
+					@include trans-ease-delay(.9s, 0.2s);
+
+					&.in-view{
+						opacity: .5;
+						@include scale(1,1);
+					}
+				}
 			}
 
 			.blurred-phone{
@@ -507,6 +592,17 @@
 				right: 0;
 				width: 161px;
 				height: 311px;
+
+				&.inview{
+					opacity: 0;
+					@include scale(.6,.6);
+					@include trans-ease-delay(.9s, 0.2s);
+
+					&.in-view{
+						opacity: 1;
+						@include scale(1,1);
+					}
+				}
 			}
 
 			.poly-graph{
@@ -516,6 +612,17 @@
 				width: 186px;
 
 				img{width: 100%;}
+
+				&.inview{
+					opacity: 0;
+					@include scale(.6,.6);
+					@include trans-ease-delay(.9s, 0.5s);
+
+					&.in-view{
+						opacity: 1;
+						@include scale(1,1);
+					}
+				}
 			}
 
 			.circle-graph{
@@ -542,6 +649,18 @@
 					margin: auto;
 					top: 0; bottom: 0;
 					left: 0; right: 0;
+					animation: dotsRing 8s ease-out infinite alternate;
+				}
+
+				&.inview{
+					opacity: 0;
+					@include scale(.6,.6);
+					@include trans-ease-delay(.9s, 0.7s);
+
+					&.in-view{
+						opacity: 1;
+						@include scale(1,1);
+					}
 				}
 			}
 
@@ -683,6 +802,44 @@
 						}
 					}
 				}
+
+				&.inview{
+					opacity: 0;
+					@include scale(.8,.8);
+					@include trans-ease-delay(.9s, .7s);
+
+					.graphs{
+						@include scale(1,0);
+						@include transform-origin(bottom, center);
+						@include trans-ease-delay(1.6s, 1s);
+					}
+
+					.face-component{
+						opacity: 0;
+						@include translate(0, 15px);
+						
+						&:first-child{@include trans-ease-delay(1s, 1.4s);}
+						&:nth-child(2){@include trans-ease-delay(1s, 1.6s);}
+						&:nth-child(3){@include trans-ease-delay(1s, 1.8s);}
+						&:nth-child(4){@include trans-ease-delay(1s, 2s);}
+						&:last-child{@include trans-ease-delay(1s, 2.2s);}
+					}
+
+
+					&.in-view{
+						opacity: 1;
+						@include scale(1,1);
+
+						.graphs{
+							@include scale(1,1);
+						}
+
+						.face-component{
+							opacity: 1;
+							@include translate(0, 0);
+						}
+					}
+				}
 			}
 		}
 
@@ -724,7 +881,7 @@
 			height: 465px;
 			border-radius: 50%;
 			@include rotate(38deg);
-			animation: dayCycle 120s ease-out 2s infinite alternate;
+			animation: dayCycle 120s ease-out .4s infinite alternate;
 
 			.bubble{
 				position: absolute;
@@ -736,7 +893,7 @@
 				background-color: #fff;
 				@include drawShadow(0,12px, 35px,0, rgba(0,0,0,.25));
 				@include rotate(-38deg);
-				animation: dayCycleBubble 120s ease-out 2s infinite alternate;
+				animation: dayCycleBubble 120s ease-out .4s infinite alternate;
 
 				&.day{
 					left: -30px;
@@ -927,6 +1084,24 @@
 				font-size: 1.2em;
 				line-height: 1.45em;
 			}
+
+			&.inview{
+				&, ._icon, p{
+					opacity: 0;
+					@include translate(0,30px);
+				}
+
+				&{@include trans-ease-delay(.7s, .5s);}
+				._icon{@include trans-ease-delay(.7s, .7s);}
+				p{@include trans-ease-delay(.7s, .9s);}
+
+				&.in-view{
+					&, ._icon, p{
+						opacity: 1;
+						@include translate(0,0);
+					}
+				}
+			}
 		}
 	}
 }
@@ -966,6 +1141,21 @@
 			min-width: 1610px;
 			display: block;
 		}
+
+		&.inview{
+			.notes{
+				opacity: 0.2;
+				@include translate(0,120px);
+				@include transitions-ease(9s);
+			}
+
+			&.in-view{
+				.notes{
+					opacity: 1;
+					@include translate(0,0);
+				}
+			}
+		}
 	}
 
 	.phones-wrapper{
@@ -980,6 +1170,17 @@
 			@include desktop-width {
 				top: 7.9%;
 				right: 9.9%;
+			}
+		}
+
+		&.inview{
+			opacity: 0;
+			@include translate(0,30px);
+			@include transitions-ease(.7s);
+
+			&.in-view{
+				opacity: 1;
+				@include translate(0,0);
 			}
 		}
 	}
@@ -1028,6 +1229,7 @@
 				position: relative;
 				color: inherit;
 				text-decoration: none;
+				@include transitions-ease(.3s);
 
 				&:after{
 					content: '';
@@ -1038,6 +1240,15 @@
 					width: 100%;
 					height: 1px;
 					background-color: #fff;
+					@include transitions-ease(.3s);
+				}
+
+				&:hover{
+					color: $brand-yellow;
+
+					&:after{
+						background-color: $brand-yellow;
+					}
 				}
 			}
 		}
@@ -1055,7 +1266,7 @@
 					}
 					&.tw{
 						position: relative;
-						width: 24px;
+						width: 25px;
 						top: -3px;
 					}
 					&.ig{
@@ -1063,6 +1274,35 @@
 						top: 1px;
 						width: 24px;
 					}
+
+					path{@include transitions-ease(.3s);}
+
+					&:hover{
+						path{
+							fill: $brand-yellow;
+						}
+					}
+				}
+			}
+		}
+
+		&.inview{
+			h4, p, .btn, li{
+				opacity: 0;
+				@include translate(0,30px);
+			}
+			h4{@include trans-ease-delay(.7s, .3s);}
+			p{@include trans-ease-delay(.7s, .45s);}
+			.btn{@include trans-ease-delay(.7s, .6s);}
+			.help{@include trans-ease-delay(.7s, .75s);}
+			li:first-child{@include trans-ease-delay(.7s, .9s);}
+			li:nth-child(2){@include trans-ease-delay(.7s, 1.05s);}
+			li:last-child{@include trans-ease-delay(.7s, 1.2s);}
+
+			&.in-view{
+				h4, p, .btn, li{
+					opacity: 1;
+					@include translate(0,0);
 				}
 			}
 		}

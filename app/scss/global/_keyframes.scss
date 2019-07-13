@@ -15,3 +15,12 @@
 		@include rotate(-138deg);
 	}
 }
+
+@keyframes dotsRing {
+	0% {
+		@include rotate(0deg);
+	}
+	100% {
+		@include rotate(60deg);
+	}
+}

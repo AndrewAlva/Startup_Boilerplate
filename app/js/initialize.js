@@ -16,8 +16,5 @@ window.onload = function() {
     inView('.inview')
         .on('enter', function(el) {
             el.classList.add('in-view');
-        })
-        .on('exit', function(el) {
-            el.classList.remove('in-view');
         });
 }
