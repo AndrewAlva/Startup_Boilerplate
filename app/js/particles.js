@@ -146,7 +146,7 @@ function render(){
         context.moveTo(_dot_a.position.x, _dot_a.position.y);
         context.lineTo(_dot_b.position.x, _dot_b.position.y);
         context.strokeStyle="white";
-        context.lineWidth = .1;
+        context.lineWidth = .025;
         // context.lineWidth = 1 - (_distance/min_distance);
         context.stroke();
       }

@@ -445,6 +445,7 @@
 							opacity: 1;
 							@include rotate(-12deg);
 						}
+						#mid-dots{opacity: .3;}
 					}
 				}
 			}
@@ -1174,6 +1175,9 @@
 				#last-dots, .notes{
 					opacity: 1;
 					@include translate(0,0);
+				}
+				#last-dots{
+					opacity: .2;
 				}
 			}
 		}
