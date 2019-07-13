@@ -8,6 +8,7 @@
 	background-color: $brand-yellow;
 	@include drawShadow(-3.126px, 17.727px, 35px, 0px, rgba(0, 0, 0, 0.2));
 	cursor: pointer;
+	@include transitions-ease(.6s);
 
 	.apple{
 		display: inline-block;
@@ -47,5 +48,10 @@
 			left: 0; right: 0;
 			width: 13px;
 		}
+	}
+
+	&:hover{
+		@include transitions-ease(.4s);
+		@include drawShadow(-1.126px, 7.727px, 10px, 0px, rgba(0, 0, 0, 0.3));
 	}
 }

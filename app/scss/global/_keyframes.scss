@@ -1,0 +1,17 @@
+@keyframes dayCycle {
+	0% {
+		@include rotate(38deg);
+	}
+	100% {
+		@include rotate(138deg);
+	}
+}
+
+@keyframes dayCycleBubble {
+	0% {
+		@include rotate(-38deg);
+	}
+	100% {
+		@include rotate(-138deg);
+	}
+}

@@ -3,24 +3,25 @@ extends _templates/layout.jade
 block content
 	//- .test
 	section.hero-section
-		.bg
+		.bg.inview
 			include _modules/svg/notes.jade
 
 		.container
 			.row
 				.col-5
 					._intro
-						h1 melodia
-						h2 a smarter music app.
-						button.cta-btn
-							figure.apple 
-								include _modules/svg/apple.jade
-							span._label get melodia
-							figure.arrow 
-								include _modules/svg/arrow.jade
+						h1.inview melodia
+						h2.inview a smarter music app.
+						.inview.btn
+							button.cta-btn
+								figure.apple 
+									include _modules/svg/apple.jade
+								span._label get melodia
+								figure.arrow 
+									include _modules/svg/arrow.jade
 
 				.col-7
-					.phones-wrapper
+					.phones-wrapper.inview
 						figure.iphone-wrap.black
 							img(src="img/iPhone-black.png", alt="iPhone Mockup")
 							.ui
@@ -41,21 +42,21 @@ block content
 
 
 	section.bullet-section.text-right
-		.skewed-bg
+		.skewed-bg.inview
 		.container
 			.row
 				.col-5.col-xl-7
 					.illustration-wrap
-						.bg
+						.bg.inview
 							include _modules/svg/rounded-square-shaded.jade
 
-						.interface
+						.interface.inview
 							include _modules/svg/dots-ring.jade
 							figure.phone
 								img.device(src="img/iphone-flat.png", alt="iPhone Device")
 								img.ui(src="img/ui-radio3.png", alt="Melodia radio interface")
 
-						ul.album-covers
+						ul.album-covers.inview
 							li.cover
 								img(src="img/song1.png", alt="melodia app albums")
 							li.cover
@@ -66,7 +67,7 @@ block content
 							li.cover
 								img(src="img/song4.png", alt="melodia app albums")
 
-						.day-cicle
+						.day-cicle.inview
 							.day.bubble
 								figure.sun
 

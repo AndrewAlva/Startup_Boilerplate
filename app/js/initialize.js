@@ -12,4 +12,12 @@ window.onload = function() {
     // Do something, remove preloader perhaps
     console.log("Page fully loaded.");
     console.log("Initialize.js");
+
+    inView('.inview')
+        .on('enter', function(el) {
+            el.classList.add('in-view');
+        })
+        .on('exit', function(el) {
+            el.classList.remove('in-view');
+        });
 }

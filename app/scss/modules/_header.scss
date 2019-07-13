@@ -46,4 +46,15 @@ header{
 		font-family: 'Gotham_Bold';
 		font-size: 1.08em;
 	}
+
+	&.inview{
+		opacity: 0;
+		@include scale(.8,.8);
+		@include transitions-ease(.6s);
+
+		&.in-view{
+			opacity: 1;
+			@include scale(1,1);
+		}
+	}
 }
