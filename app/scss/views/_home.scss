@@ -17,7 +17,7 @@
 	position: relative;
 	width: 100%;
 	color: #fff;
-	padding-top: 95px;
+	padding-top: 97px;
 	padding-bottom: 20px;
 	overflow: hidden;
 
@@ -64,7 +64,7 @@
 		line-height: 1em;
 		letter-spacing: -.05em;
 		height: 110px;
-		margin-bottom: 17px;
+		margin-bottom: 14px;
 		margin-left: -5px;
 	}
 
@@ -72,20 +72,21 @@
 		font-family: 'Gotham_Bold';
 		font-size: 1.3em;
 		margin-bottom: 35px;
+		padding-left: 2px;
 	}
 
 	.phones-wrapper{
 		position: relative;
 		@include flexIt;
-		left: -30px;
+		left: -29px;
 
 		.iphone-wrap{
 			&:not(:first-child){
-				margin-left: -86px;
+				margin-left: -88px;
 			}
 
 			&.black{
-				margin-top: 78px;
+				margin-top: 76px;
 			}
 		}
 	}
@@ -100,6 +101,7 @@
 		position: relative;
 		display: block;
 		margin: 0 auto;
+		left: 8px;
 		width: 100%;
 		max-width: 904px;
 		vertical-align: top;
@@ -114,13 +116,13 @@
 		z-index: 2;
 		position: relative;
 		margin-top: 55px;
-		margin-bottom: 115px;
+		margin-bottom: 113px;
 
 		.skewed-bg{
 			position: absolute;
-			top: 177px;
+			top: 175px;
 			width: 100%;
-			height: 1973px;
+			height: 1964px;
 			background-color: #fff;
 			@include skew(0, -26deg);
 		}
@@ -128,11 +130,11 @@
 		.illustration-wrap{
 			width: 569px;
 			height: 569px;
-			left: 18px;
+			left: 14px;
 
 			.bg{
 				.round-square{
-					@include rotate(29.95deg);
+					@include rotate(29.85deg);
 				}
 			}
 		}
@@ -157,6 +159,8 @@
 
 			.bg{
 				.round-square{
+					position: absolute;
+					left: -5px;
 					@include rotate(-12deg);
 				}
 			}
@@ -181,7 +185,7 @@
 			position: relative;
 			width: 100%;
 			height: 100%;
-			margin-top: 28px;
+			margin-top: 29px;
 
 			.round-square{
 				width: 100%;
@@ -207,9 +211,10 @@
 			.phone{
 				position: absolute;
 				margin: auto;
-				top: 32px;
+				top: 26px;
 				bottom: 0;
-				left: 0; right: 0;
+				left: 0;
+				right: 2px;
 				width: 266px;
 				height: 465px;
 
@@ -229,9 +234,9 @@
 			}
 
 			.br-code{
-				width: 49px;
-				bottom: 168px;
-				right: 95px;
+				width: 57px;
+				bottom: 164px;
+				right: 93px;
 				// opacity: .85;
 			}
 			.tr-code{
@@ -244,7 +249,7 @@
 			.left-code{
 				width: 82px;
 				left: 58px;
-				bottom: 188px;
+				bottom: 185px;
 				// opacity: .3;
 				mix-blend-mode: soft-light;
 			}
@@ -311,8 +316,8 @@
 
 			.singers-graph{
 				position: absolute;
-				top: 135px;
-				left: -45px;
+				top: 134px;
+				left: -43px;
 				width: 373px;
 				height: 224px;
 				border-radius: 15px;
@@ -345,23 +350,23 @@
 						display: inline-block;
 
 						&.first{
-							top: 93px;
-							left: 52px;
+							top: 101px;
+							left: 51px;
 						}
 						&.second{
-							top: 12px;
-							left: 80px;
+							top: 18px;
+							left: 75px;
 						}
 						&.third{
-							top: 88px;
-							left: 135px;
+							top: 95px;
+							left: 129px;
 						}
 						&.fourth{
-							top: -20px;
+							top: -14px;
 							right: 123px;
 						}
 						&.fifth{
-							top: 43px;
+							top: 48px;
 							right: 47px;
 						}
 
@@ -452,12 +457,12 @@
 
 		.album-covers{
 			position: absolute;
-			top: 118px;
+			top: 113px;
 			left: 50%;
 			@include translate(-50%, 0)
 			bottom: 0;
 			margin: auto;
-			width: 670px;
+			width: 675px;
 			height: 120px;
 			@include flexIt;
 			list-style: none;
@@ -487,24 +492,27 @@
 			width: 465px;
 			height: 465px;
 			border-radius: 50%;
-			@include rotate(35deg);
+			@include rotate(38deg);
 
 			.bubble{
 				position: absolute;
 				margin: auto;
-				top: 0; bottom: 0;
+				top: 0; 
 				width: 64px;
 				height: 64px;
 				border-radius: 50%;
 				background-color: #fff;
 				@include drawShadow(0,12px, 35px,0, rgba(0,0,0,.25));
-				@include rotate(-35deg);
+				@include rotate(-38deg);
 
 				&.day{
 					left: -30px;
+					bottom: 0;
 				}
 				&.night{
 					right: -30px;
+					
+					bottom: 42px;
 				}
 
 				figure{
@@ -559,7 +567,7 @@
 	z-index: 4;
 	position: relative;
 	padding-top: 90px;
-	padding-bottom: 95px;
+	padding-bottom: 97px;
 
 	._info{
 		text-align: center;
@@ -594,7 +602,7 @@
 				position: absolute;
 				margin: auto;
 				left: 0; right: 0;
-				top: -48px;
+				top: -43px;
 				width: 76px;
 				height: 76px;
 
@@ -645,7 +653,7 @@
 			p{
 				font-family: 'Gotham_Bold';
 				font-size: 1.2em;
-				line-height: 1.4em;
+				line-height: 1.45em;
 			}
 		}
 	}
@@ -654,7 +662,7 @@
 .centered-section{
 	position: relative;
 	color: #fff;
-	padding-top: 74px;
+	padding-top: 68px;
 	z-index: 1;
 
 	.bg{
@@ -669,8 +677,8 @@
 		.notes{
 			position: absolute;
 			margin: auto;
-			top: -90px;
-			left: 366px;
+			top: -95px;
+			left: 363px;
 			right: 0;
 			width: 510px;
 			opacity: .55;
@@ -690,11 +698,16 @@
 		position: relative;
 		left: -38px;
 		margin-bottom: 40px;
+
+		.iphone-wrap.white .ui{
+			top: 7.9%;
+			right: 9.9%;
+		}
 	}
 
 	.closure-text{
 		position: relative;
-		left: -15px;
+		left: -12px;
 		width: 370px;
 		padding-top: 35px;
 
@@ -702,7 +715,7 @@
 			font-family: 'Gotham_Bold';
 			font-size: 3.25em;
 			line-height: 1em;
-			margin-bottom: 28px;
+			margin-bottom: 24px;
 		}
 
 		p{
@@ -710,15 +723,18 @@
 			font-size: 1.1em;
 			line-height: 1.45em;
 			margin-bottom: 37px;
+			letter-spacing: 0.01em;
 		}
 
 		.cta-btn{
-			margin-bottom: 34px;
+			margin-bottom: 33px;
 		}
 
 		.help{
 			font-family: 'Gotham_Medium';
 			font-size: .9em;
+			letter-spacing: -0.01em;
+			margin-bottom: 50px;
 
 			a{
 				position: relative;
@@ -750,7 +766,9 @@
 						width: 12px;
 					}
 					&.tw{
+						position: relative;
 						width: 24px;
+						top: -1px;
 					}
 					&.ig{
 						position: relative;

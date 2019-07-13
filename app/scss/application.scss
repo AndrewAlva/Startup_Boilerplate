@@ -28,3 +28,12 @@
 	top: 0;
 	left: 0;
 }
+
+.tester{
+	z-index: 999999999;
+	display: block;
+	position: absolute;
+	width: 100%;
+	opacity: .5;
+	pointer-events: none;
+}

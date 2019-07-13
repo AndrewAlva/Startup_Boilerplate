@@ -2,7 +2,7 @@ footer{
 	position: relative;
 	width: 100%;
 	text-align: center;
-	padding: 38px 0 54px;
+	padding: 36px 0 54px;
 
 	&:before{
 		content: '';
@@ -26,6 +26,7 @@ footer{
 	p{
 		font-family: 'Gotham_Light';
 		font-size: .7em;
+		letter-spacing: -0.001em;
 		color: $brand-blue--down;
 
 		a{
