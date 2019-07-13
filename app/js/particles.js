@@ -24,7 +24,7 @@ var totalDots = isMobile ? 30 : 60;
 var dots = [];
 var dots2 = [];
 var dots3 = [];
-var min_distance = 180;
+var min_distance = 140;
 var friction = 0.15; //
 // size
 var width = window.innerWidth,
@@ -32,20 +32,20 @@ var width = window.innerWidth,
 
 function init(){
 	canvas = document.getElementById('hero-dots');
-	canvas.width = width;
-	canvas.height = height;
+	canvas.width = canvas.getBoundingClientRect().width;
+	canvas.height = canvas.getBoundingClientRect().height;
 	context = canvas.getContext("2d");
 	setDots(dots);
 
 	canvas2 = document.getElementById('mid-dots');
-	canvas2.width = width;
-	canvas2.height = height;
+	canvas2.width = canvas2.getBoundingClientRect().width;
+	canvas2.height = canvas2.getBoundingClientRect().height;
 	context2 = canvas2.getContext("2d");
-	setDots(dots2);
+	setDotsDown(dots2);
 
 	canvas3 = document.getElementById('last-dots');
-	canvas3.width = width;
-	canvas3.height = height;
+	canvas3.width = canvas3.getBoundingClientRect().width;
+	canvas3.height = canvas3.getBoundingClientRect().height;
 	context3 = canvas3.getContext("2d");
 	setDots(dots3);
 	addEvents();
@@ -75,16 +75,28 @@ function setDots(dotsArray){
 		dotsArray.push(_dot);
 	}
 }
+function setDotsDown(dotsArray){
+	for (var i = 0; i < totalDots; i++) {
+		if (i < totalDots / 2) {
+			var _dot = new Dot({
+				x: Math.random() * canvas.width / 2,
+				y: (Math.random() * canvas.height / 4) + ((canvas.height / 4)*3)
+			});
+		}
+
+		dotsArray.push(_dot);
+	}
+}
 
 function onWindowResize(){
 	width = window.innerWidth;
 	height = window.innerHeight;
-	canvas.width = width;
-	canvas.height = height;
-	canvas2.width = width;
-	canvas2.height = height;
-	canvas3.width = width;
-	canvas3.height = height;
+	canvas.width = canvas.getBoundingClientRect().width;
+	canvas.height = canvas.getBoundingClientRect().height;
+	canvas2.width = canvas2.getBoundingClientRect().width;
+	canvas2.height = canvas2.getBoundingClientRect().height;
+	canvas3.width = canvas3.getBoundingClientRect().width;
+	canvas3.height = canvas3.getBoundingClientRect().height;
 }
 
 var Dot = function(args){
@@ -146,8 +158,8 @@ function render(){
         context.moveTo(_dot_a.position.x, _dot_a.position.y);
         context.lineTo(_dot_b.position.x, _dot_b.position.y);
         context.strokeStyle="white";
-        context.lineWidth = .025;
-        // context.lineWidth = 1 - (_distance/min_distance);
+        context.lineWidth = .05;
+        // context.lineWidth = .25 - (_distance/min_distance);
         context.stroke();
       }
       
@@ -156,8 +168,8 @@ function render(){
         context2.moveTo(_dot_a2.position.x, _dot_a2.position.y);
         context2.lineTo(_dot_b2.position.x, _dot_b2.position.y);
         context2.strokeStyle="white";
-        context2.lineWidth = .1;
-        // context2.lineWidth = 1 - (_distance/min_distance);
+        context2.lineWidth = .04;
+        // context2.lineWidth = .5 - (_distance/min_distance);
         context2.stroke();
       }
       
@@ -166,8 +178,8 @@ function render(){
         context3.moveTo(_dot_a3.position.x, _dot_a3.position.y);
         context3.lineTo(_dot_b3.position.x, _dot_b3.position.y);
         context3.strokeStyle="white";
-        context3.lineWidth = .1;
-        // context3.lineWidth = 1 - (_distance3/min_distance);
+        context3.lineWidth = .08;
+        // context3.lineWidth = .2 - (_distance3/min_distance);
         context3.stroke();
       }
     }

@@ -73,7 +73,7 @@
 
 			&.in-view{
 				.notes, #hero-dots{
-					opacity: 0.55;
+					opacity: 0.7;
 					@include translate(0,0);
 				}
 			}
@@ -445,7 +445,7 @@
 							opacity: 1;
 							@include rotate(-12deg);
 						}
-						#mid-dots{opacity: .3;}
+						#mid-dots{opacity: .8;}
 					}
 				}
 			}
@@ -1177,7 +1177,7 @@
 					@include translate(0,0);
 				}
 				#last-dots{
-					opacity: .2;
+					opacity: 1;
 				}
 			}
 		}
