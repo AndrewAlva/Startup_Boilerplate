@@ -46,6 +46,13 @@
 		height: 100%;
 		background-color: $brand-blue;
 
+		#hero-dots{
+			position: absolute;
+			top: 0; left: 0;
+			width: 100%;
+			height: 100%;
+		}
+
 		.notes{
 			position: absolute;
 			margin: auto;
@@ -58,14 +65,14 @@
 		}
 
 		&.inview{
-			.notes{
+			.notes, #hero-dots{
 				opacity: 0;
 				@include translate(15px,80px);
 				@include transitions-ease(5s);
 			}
 
 			&.in-view{
-				.notes{
+				.notes, #hero-dots{
 					opacity: 0.55;
 					@include translate(0,0);
 				}
@@ -413,6 +420,13 @@
 				}
 
 			.bg{
+				#mid-dots{
+					position: absolute;
+					top: 0; left: 0;
+					width: 100%;
+					height: 100%;
+				}
+
 				.round-square{
 					position: absolute;
 					left: -5px;
@@ -420,14 +434,14 @@
 				}
 
 				&.inview{
-					svg{
+					#mid-dots, svg{
 						opacity: 0;
 						@include rotate(-32deg);
 						@include trans-ease-delay(.7s, 0s);
 					}
 
 					&.in-view{
-						svg{
+						#mid-dots, svg{
 							opacity: 1;
 							@include rotate(-12deg);
 						}
@@ -1121,6 +1135,13 @@
 		background-color: $brand-blue;
 		overflow: hidden;
 
+		#last-dots{
+			position: absolute;
+			top: 0; left: 0;
+			width: 100%;
+			height: 100%;
+		}
+
 		.notes{
 			position: absolute;
 			margin: auto;
@@ -1143,14 +1164,14 @@
 		}
 
 		&.inview{
-			.notes{
+			#last-dots, .notes{
 				opacity: 0.2;
 				@include translate(0,120px);
 				@include transitions-ease(9s);
 			}
 
 			&.in-view{
-				.notes{
+				#last-dots, .notes{
 					opacity: 1;
 					@include translate(0,0);
 				}
@@ -1160,8 +1181,11 @@
 
 	.phones-wrapper{
 		position: relative;
-		left: -38px;
 		margin-bottom: 40px;
+
+		@include desktop-width {
+			left: -38px;
+		}
 
 		.iphone-wrap.white .ui{
 			top: 8.9%;
