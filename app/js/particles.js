@@ -135,7 +135,7 @@ function animate(){
 function render(){
 	context.clearRect(0,0,canvas.width,canvas.height);
 	context2.clearRect(0,0,canvas.width,canvas.height);
-	context3.clearRect(0,0,canvas.width,canvas.height);
+	context3.clearRect(0,0,canvas.width,canvas.height + 5);
 
 	for (var i = 0; i < dots.length; i++) {
 		var _dot_a = dots[i];

@@ -18,8 +18,8 @@
 			@include translate(0,30px);
 		}
 
-		h3{@include trans-ease-delay(.7s, .4s);}
-		p{@include trans-ease-delay(.7s, .7s);}
+		h3{@include trans-ease-delay(.7s, .1s);}
+		p{@include trans-ease-delay(.7s, .4s);}
 
 		&.in-view{
 			h3, p{
@@ -120,13 +120,13 @@
 		}
 
 		h1.in-view{
-			@include trans-ease-delay(.6s, 0)
+			@include transitions-ease(.4s)
 		}
 		h2.in-view{
-			@include trans-ease-delay(.6s, 0.15s)
+			@include trans-ease-delay(.4s, 0.15s)
 		}
 		.btn.in-view{
-			@include trans-ease-delay(.6s, 0.3s)
+			@include trans-ease-delay(.4s, 0.3s)
 		}
 	}
 
@@ -183,9 +183,9 @@
 					opacity: 1;
 					@include translate(0,0);
 
-					&:first-child{@include trans-ease-delay(1.2s, 0.6s);}
-					&:nth-child(2){@include trans-ease-delay(2s, 0.45s);}
-					&:last-child{@include trans-ease-delay(1.2s, 0.75s);}
+					&:first-child{@include trans-ease-delay(.6s, 0.6s);}
+					&:nth-child(2){@include trans-ease-delay(1s, 0.45s);}
+					&:last-child{@include trans-ease-delay(.6s, 0.75s);}
 				}
 			}
 		}
@@ -284,7 +284,7 @@
 				&.inview{
 					svg{
 						opacity: 0;
-						@include trans-ease-delay(.7s, .5s);
+						@include trans-ease-delay(.6s, .3s);
 					}
 
 					&.in-view{
@@ -298,14 +298,14 @@
 			.interface.inview{
 				svg{
 					opacity: 0;
-					@include trans-ease-delay(.7s, 1.2s);
+					@include trans-ease-delay(.7s, .6s);
 					animation: dotsRing 120s ease-out .4s infinite alternate;
 				}
 
 				.phone{
 					opacity: 0;
 					@include translate(0,-20px);
-					@include trans-ease-delay(.8s, .8s);
+					@include trans-ease-delay(.8s, .4s);
 				}
 
 				&.in-view{
@@ -326,21 +326,21 @@
 					
 					&:first-child{
 						@include translate(90px,0);
-						@include trans-ease-delay(.8s, 1.3s);
+						@include trans-ease-delay(.8s, .65s);
 					}
 					&:nth-child(2){
 						z-index: 1;
 						@include translate(40px,0);
-						@include trans-ease-delay(.8s, 1.2s);
+						@include trans-ease-delay(.8s, .5s);
 					}
 					&:nth-child(4){
 						z-index: 1;
 						@include translate(-40px,0);
-						@include trans-ease-delay(.8s, 1.2s);
+						@include trans-ease-delay(.8s, .5s);
 					}
 					&:nth-child(5){
 						@include translate(-90px,0);
-						@include trans-ease-delay(.8s, 1.3s);
+						@include trans-ease-delay(.8s, .65s);
 					}
 				}
 
@@ -356,7 +356,7 @@
 				.bubble{
 					opacity: 0;
 					@include scale(.8,.8);
-					@include trans-ease-delay(1s, 1.4s);
+					@include trans-ease-delay(1s, .7s);
 				}
 
 				&.in-view{
@@ -437,7 +437,7 @@
 					#mid-dots, svg{
 						opacity: 0;
 						@include rotate(-32deg);
-						@include trans-ease-delay(.7s, 0s);
+						@include transitions-ease(1.4s);
 					}
 
 					&.in-view{
@@ -531,7 +531,7 @@
 				&.inview{
 					opacity: 0;
 					@include scale(.6,.6);
-					@include trans-ease-delay(.9s, 0.2s);
+					@include trans-ease-delay(.6s, 0.1s);
 
 					&.in-view{
 						opacity: 1;
@@ -548,7 +548,7 @@
 				&.inview{
 					opacity: 0;
 					@include scale(.6,.6);
-					@include trans-ease-delay(.9s, 0.3s);
+					@include trans-ease-delay(.6s, 0.15s);
 
 					&.in-view{
 						opacity: 1;
@@ -565,7 +565,7 @@
 				&.inview{
 					opacity: 0;
 					@include scale(.6,.6);
-					@include trans-ease-delay(.9s, 0.5s);
+					@include trans-ease-delay(.6s, 0.25s);
 
 					&.in-view{
 						opacity: 1;
@@ -589,7 +589,7 @@
 				&.inview{
 					opacity: 0;
 					@include scale(.6,.6);
-					@include trans-ease-delay(.9s, 0.2s);
+					@include trans-ease-delay(.6s, 0.1s);
 
 					&.in-view{
 						opacity: .5;
@@ -611,7 +611,7 @@
 				&.inview{
 					opacity: 0;
 					@include scale(.6,.6);
-					@include trans-ease-delay(.9s, 0.2s);
+					@include trans-ease-delay(.6s, 0.1s);
 
 					&.in-view{
 						opacity: 1;
@@ -631,7 +631,7 @@
 				&.inview{
 					opacity: 0;
 					@include scale(.6,.6);
-					@include trans-ease-delay(.9s, 0.5s);
+					@include trans-ease-delay(.6s, 0.25s);
 
 					&.in-view{
 						opacity: 1;
@@ -670,7 +670,7 @@
 				&.inview{
 					opacity: 0;
 					@include scale(.6,.6);
-					@include trans-ease-delay(.9s, 0.7s);
+					@include trans-ease-delay(.6s, 0.3s);
 
 					&.in-view{
 						opacity: 1;
@@ -821,23 +821,23 @@
 				&.inview{
 					opacity: 0;
 					@include scale(.8,.8);
-					@include trans-ease-delay(.9s, .7s);
+					@include trans-ease-delay(.6s, .3s);
 
 					.graphs{
 						@include scale(1,0);
 						@include transform-origin(bottom, center);
-						@include trans-ease-delay(1.6s, 1s);
+						@include trans-ease-delay(.9s, .5s);
 					}
 
 					.face-component{
 						opacity: 0;
 						@include translate(0, 15px);
 						
-						&:first-child{@include trans-ease-delay(1s, 1.4s);}
-						&:nth-child(2){@include trans-ease-delay(1s, 1.6s);}
-						&:nth-child(3){@include trans-ease-delay(1s, 1.8s);}
-						&:nth-child(4){@include trans-ease-delay(1s, 2s);}
-						&:last-child{@include trans-ease-delay(1s, 2.2s);}
+						&:first-child{@include trans-ease-delay(.6s, .6s);}
+						&:nth-child(2){@include trans-ease-delay(.6s, .7s);}
+						&:nth-child(3){@include trans-ease-delay(.6s, .8s);}
+						&:nth-child(4){@include trans-ease-delay(.6s, .9s);}
+						&:last-child{@include trans-ease-delay(.6s, 1s);}
 					}
 
 
@@ -1106,9 +1106,9 @@
 					@include translate(0,30px);
 				}
 
-				&{@include trans-ease-delay(.7s, .5s);}
-				._icon{@include trans-ease-delay(.7s, .7s);}
-				p{@include trans-ease-delay(.7s, .9s);}
+				&{@include trans-ease-delay(.5s, .25s);}
+				._icon{@include trans-ease-delay(.5s, .35s);}
+				p{@include trans-ease-delay(.5s, .45s);}
 
 				&.in-view{
 					&, ._icon, p{
@@ -1168,7 +1168,7 @@
 			#last-dots, .notes{
 				opacity: 0.2;
 				@include translate(0,120px);
-				@include transitions-ease(9s);
+				@include transitions-ease(7s);
 			}
 
 			&.in-view{
@@ -1319,13 +1319,13 @@
 				opacity: 0;
 				@include translate(0,30px);
 			}
-			h4{@include trans-ease-delay(.7s, .3s);}
-			p{@include trans-ease-delay(.7s, .45s);}
-			.btn{@include trans-ease-delay(.7s, .6s);}
-			.help{@include trans-ease-delay(.7s, .75s);}
-			li:first-child{@include trans-ease-delay(.7s, .9s);}
-			li:nth-child(2){@include trans-ease-delay(.7s, 1.05s);}
-			li:last-child{@include trans-ease-delay(.7s, 1.2s);}
+			h4{@include trans-ease-delay(.5s, .2s);}
+			p{@include trans-ease-delay(.5s, .35s);}
+			.btn{@include trans-ease-delay(.5s, .5s);}
+			.help{@include trans-ease-delay(.5s, .65s);}
+			li:first-child{@include trans-ease-delay(.5s, .8s);}
+			li:nth-child(2){@include trans-ease-delay(.5s, .85s);}
+			li:last-child{@include trans-ease-delay(.5s, .9s);}
 
 			&.in-view{
 				h4, p, .btn, li{
