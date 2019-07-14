@@ -1099,22 +1099,26 @@
 				font-size: 1.2em;
 				line-height: 1.45em;
 			}
+		}
+	}
 
-			&.inview{
+	&.inview{
+		.cards-container .card-wrap{
+			&, ._icon, p{
+				opacity: 0;
+				@include translate(0,30px);
+			}
+
+			&{@include trans-ease-delay(.5s, .25s);}
+			._icon{@include trans-ease-delay(.5s, .35s);}
+			p{@include trans-ease-delay(.5s, .45s);}
+		}
+
+		&.in-view{
+			.cards-container .card-wrap{
 				&, ._icon, p{
-					opacity: 0;
-					@include translate(0,30px);
-				}
-
-				&{@include trans-ease-delay(.5s, .25s);}
-				._icon{@include trans-ease-delay(.5s, .35s);}
-				p{@include trans-ease-delay(.5s, .45s);}
-
-				&.in-view{
-					&, ._icon, p{
-						opacity: 1;
-						@include translate(0,0);
-					}
+					opacity: 1;
+					@include translate(0,0);
 				}
 			}
 		}
