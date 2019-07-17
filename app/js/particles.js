@@ -186,5 +186,5 @@ function render(){
 	}
 }
 
-// init();
-// animate();
+init();
+animate();

@@ -248,7 +248,6 @@
 	img{
 		position: relative;
 		display: block;
-		margin: 0 auto;
 		width: 600px;
 		max-width: 904px;
 		left: 50%;
@@ -259,6 +258,7 @@
 			width: 100%;
 			left: 8px;
 			@include translate(0,0);
+			margin: 0 auto;
 		}
 	}
 
@@ -515,6 +515,18 @@
 
 			@include desktop-width {
 				left: 71px;
+			}
+
+			h3{
+				max-width: 505px;
+				margin-left: auto;
+				margin-right: auto;
+
+				@include laptop-sm-width {
+					max-width: unset;
+					margin-left: 0;
+					margin-right: 0;
+				}
 			}
 
 			p{
@@ -1261,11 +1273,19 @@
 	z-index: 4;
 	position: relative;
 	padding-top: 89px;
-	padding-bottom: 97px;
+	margin-bottom: 40px;
+
+	@include laptop-sm-width {
+		padding-bottom: 97px;
+	}
 
 	._info{
 		text-align: center;
-		margin-bottom: 131px;
+		margin-bottom: 91px;
+
+		@include laptop-sm-width {
+			margin-bottom: 131px;
+		}
 
 		h3{
 			margin-bottom: 30px;
@@ -1274,11 +1294,16 @@
 		p{
 			position: relative;
 			margin: 0 auto;
-			width: 70%;
-			max-width: 920px;
+			padding: 0 20px;
+			max-width: 505px;
+			
+			@include laptop-sm-width {
+				max-width: 920px;
+			}
 
 			@include desktop-width {
 				width: 90%;
+				padding: 0;
 			}
 		}
 	}
@@ -1299,10 +1324,19 @@
 
 		[class*="col-"]{
 			padding: 0 8px;
+
+			&:not(:last-child){
+				margin-bottom: 80px;
+
+				@include laptop-sm-width {
+					margin-bottom: 0;
+				}
+			}
 		}
 		.card-wrap{
 			position: relative;
 			padding: 52px 15px 30px;
+			
 			text-align: center;
 			border-radius: 15px;
 			border: 1px solid #e4e4e4;
@@ -1439,22 +1473,32 @@
 		.notes{
 			position: absolute;
 			margin: auto;
-			top: -95px;
-			left: 363px;
+			top: 55px;
+			left: 18px;
 			right: 0;
-			width: 510px;
+			width: 350px;
 			opacity: .55;
 			mix-blend-mode: soft-light;
+
+			@include laptop-sm-width {
+				top: -95px;
+				left: 363px;
+				width: 510px;
+			}
 		}
 
 		.closure-wave{
+			display: block;
 			position: absolute;
 			top: 0;
 			left: 50%;
-			@include translate(-50%,0);
+			@include translate(-30%,0);
 			width: 100.08%;
 			min-width: 1610px;
-			display: block;
+
+			@include laptop-sm-width {
+				@include translate(-50%, 0);
+			}
 		}
 
 		&.inview{
@@ -1478,7 +1522,16 @@
 
 	.phones-wrapper{
 		position: relative;
-		margin-bottom: 40px;
+		left: 52%;
+		@include translate(-50%, 0);
+		width: 345px;
+
+		@include laptop-sm-width {
+			left: 0;
+			@include translate(0,0);
+			margin-bottom: 40px;
+			width: auto;
+		}
 
 		@include desktop-width {
 			left: -38px;
@@ -1496,21 +1549,38 @@
 
 		&.inview{
 			opacity: 0;
-			@include translate(0,30px);
+			@include translate(-56%,30px);
 			@include transitions-ease(.7s);
+			
+			@include laptop-sm-width {
+				@include translate(0,30px);
+			}
 
 			&.in-view{
 				opacity: 1;
-				@include translate(0,0);
+				@include translate(-56%,0);
+				
+				@include laptop-sm-width {
+					@include translate(0,0);
+				}
 			}
 		}
 	}
 
 	.closure-text{
 		position: relative;
-		left: 30px;
-		width: 370px;
 		padding-top: 35px;
+		text-align: center;
+		max-width: 400px;
+		margin: 0 auto 50px;
+
+		@include laptop-sm-width {
+			width: 370px;
+			max-width: unset;
+			left: 30px;
+			text-align: left;
+			margin: 0;
+		}
 
 		@include desktop-width {
 			left: -12px;
@@ -1528,8 +1598,13 @@
 			font-size: 1.1em;
 			line-height: 1.45em;
 			margin-bottom: 37px;
+			padding: 0 20px;
 			letter-spacing: 0.01em;
-			width: 80%;
+
+			@include laptop-sm-width {
+				width: 80%;
+				padding: 0;
+			}
 
 			@include laptop-md-width {
 				width: 100%;
