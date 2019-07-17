@@ -9,19 +9,20 @@ block content
 
 		.container
 			.row
-				.col-5
+				.col-12.col-lg-5
 					._intro
 						h1.inview melodia
 						h2.inview a smarter music app.
 						.inview.btn
 							button.cta-btn
-								figure.apple 
-									include _modules/svg/apple.jade
-								span._label get melodia
-								figure.arrow 
-									include _modules/svg/arrow.jade
+								a(href="https://google.com/" target="_blank")
+									figure.apple 
+										include _modules/svg/apple.jade
+									span._label get melodia
+									figure.arrow 
+										include _modules/svg/arrow.jade
 
-				.col-7
+				.col-12.col-lg-7
 					.phones-wrapper.inview
 						figure.iphone-wrap.black
 							img(src="img/iPhone-black.png", alt="iPhone Mockup")
@@ -45,8 +46,8 @@ block content
 	section.bullet-section.text-right
 		.skewed-bg.inview
 		.container
-			.row
-				.col-5.col-xl-7
+			.row.order-wrap
+				.col-12.col-lg-5.col-xl-7.mob-2
 					.illustration-wrap
 						.bg.inview
 							include _modules/svg/rounded-square-shaded.jade
@@ -76,7 +77,7 @@ block content
 								figure.moon
 									include _modules/svg/moon.jade
 
-				.col-5.offset-2.offset-xl-0
+				.col-12.col-lg-5.offset-lg-2.offset-xl-0.mob-1
 					._info.inview
 						h3
 							|simple
@@ -92,7 +93,7 @@ block content
 	section.bullet-section.text-left
 		.container
 			.row
-				.col-6
+				.col-12.col-lg-6
 					._info.inview
 						h3 
 							|it 
@@ -101,7 +102,7 @@ block content
 
 						p with its advanced AI and machine learning algorithms, melodia dynamically curates the right flow of songs that best match your taste and moment.
 
-				.col-6
+				.col-12.col-lg-6
 					.illustration-wrap
 						.bg.inview
 							include _modules/svg/rounded-square.jade
@@ -224,11 +225,12 @@ block content
 							span.bold-high 40 million songs.
 						.btn
 							button.cta-btn
-								figure.apple 
-									include _modules/svg/apple.jade
-								span._label get melodia
-								figure.arrow 
-									include _modules/svg/arrow.jade
+								a(href="https://google.com/" target="_blank")
+									figure.apple 
+										include _modules/svg/apple.jade
+									span._label get melodia
+									figure.arrow 
+										include _modules/svg/arrow.jade
 
 						p.help
 							span.blue-down questions? 

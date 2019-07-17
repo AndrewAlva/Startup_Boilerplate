@@ -36,7 +36,12 @@
 
 			img{
 				position: absolute;
-				bottom: -3px;
+				bottom: -5px;
+				left: 0;
+				
+				@include laptop-sm-width {
+					bottom: -3px;
+				}
 			}
 		}
 	}

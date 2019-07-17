@@ -1,15 +1,23 @@
 ._info{
 	h3{
 		font-family: 'Gotham_Bold';
-		font-size: 3.4em;
+		font-size: 2.8em;
 		line-height: 1.2em;
 		margin-bottom: 15px;
+
+		@include laptop-sm-width {
+			font-size: 3.4em;
+		}
 	}
 
 	p{
 		font-family: 'Gotham_Light';
-		font-size: 1.35em;
+		font-size: 1.2em;
 		line-height: 1.5em;
+
+		@include laptop-sm-width {
+			font-size: 1.35em;
+		}
 	}
 
 	&.inview{
@@ -37,6 +45,11 @@
 	padding-top: 97px;
 	padding-bottom: 20px;
 	overflow: hidden;
+	text-align: center;
+
+	@include laptop-sm-width {
+		text-align: left;
+	}
 
 	.bg{
 		position: absolute;
@@ -101,8 +114,12 @@
 	}
 
 	._intro{
-		padding-top: 175px;
-		padding-left: 40px;
+		padding-top: 35px;
+
+		@include laptop-sm-width {
+			padding-top: 175px;
+			padding-left: 40px;
+		}
 
 		@include desktop-width {
 			padding-top: 225px;
@@ -132,24 +149,45 @@
 
 	h1{
 		font-family: 'Gotham_Bold';
-		font-size: 6.4em;
+		font-size: 3.4em;
 		line-height: 1em;
-		letter-spacing: -.05em;
-		height: 110px;
-		margin-bottom: 14px;
-		margin-left: -5px;
+		letter-spacing: -.02em;
+		height: 50px;
+		margin-bottom: 4px;
+
+		@include laptop-sm-width {
+			font-size: 6.4em;
+			letter-spacing: -.05em;
+			height: 110px;
+			margin-bottom: 14px;
+			margin-left: -5px;
+		}
 	}
 
 	h2{
 		font-family: 'Gotham_Bold';
-		font-size: 1.3em;
-		margin-bottom: 35px;
+		font-size: 1.1em;
+		margin-bottom: 25px;
 		padding-left: 2px;
+
+		@include laptop-sm-width {
+			font-size: 1.3em;
+			margin-bottom: 35px;
+		}
 	}
 
 	.phones-wrapper{
 		position: relative;
 		@include flexIt;
+		width: 603px;
+		left: 50%;
+		@include translate(-57%, 0);
+
+		@include laptop-sm-width {
+			width: auto;
+			transform: none;
+			left: 0;
+		}
 
 		@include desktop-width {
 			left: -29px;
@@ -157,14 +195,23 @@
 
 		.iphone-wrap{
 			&:not(:first-child){
-				margin-left: -70px;
+				margin-left: -170px;
+
+				@include laptop-sm-width {
+					margin-left: -70px;
+				}
 				@include desktop-width {
 					margin-left: -88px;
 				}
 			}
 
 			&.black{
-				margin-top: 56px;
+				margin-top: 100px;
+				margin-bottom: -30px;
+				@include laptop-sm-width {
+					margin-top: 56px;
+					margin-bottom: 0;
+				}
 				@include desktop-width {
 					margin-top: 76px;
 				}
@@ -196,15 +243,23 @@
 	z-index: 10;
 	position: relative;
 	width: 100%;
+	overflow: hidden;
 
 	img{
 		position: relative;
 		display: block;
 		margin: 0 auto;
-		left: 8px;
-		width: 100%;
+		width: 600px;
 		max-width: 904px;
+		left: 50%;
+		@include translate(-50%, 0);
 		vertical-align: top;
+
+		@include laptop-sm-width {
+			width: 100%;
+			left: 8px;
+			@include translate(0,0);
+		}
 	}
 
 	&.inview{
@@ -223,6 +278,24 @@
 	position: relative;
 	width: 100%;
 
+	.order-wrap{
+		@include flexIt;
+		.mob-1{
+			@include flexOrder(1);
+
+			@include laptop-sm-width {
+				@include flexOrder(2);
+			}
+		}
+		.mob-2{
+			@include flexOrder(2);
+
+			@include laptop-sm-width {
+				@include flexOrder(1);
+			}
+		}
+	}
+
 	&.text-right{
 		z-index: 2;
 		position: relative;
@@ -235,11 +308,14 @@
 
 		.skewed-bg{
 			position: absolute;
-			top: 175px;
+			top: 450px;
 			width: 100%;
 			height: 1784px;
 			background-color: #fff;
 			// @include skew(0, -26deg);
+			@include laptop-sm-width {
+				top: 175px;
+			}
 
 			@include desktop-width {
 				height: 1964px;
@@ -258,27 +334,39 @@
 		}
 
 		.illustration-wrap{
-			width: 569px;
-			height: 569px;
-			left: 50px;
-				transform: scale(0.7);
-				transform-origin: top left;
+			width: 290px;
+			margin: 100px auto;
+			@include scale(1.2,1.2);
+
+			@include laptop-sm-width {
 				top: 44px;
+				left: 50px;
+				width: 569px;
+				height: 569px;
+				@include scale(0.7, 0.7);
+				@include transform-origin(top, left);
+				margin: 0;
+			}
 
 			@include laptop-md-width {
-				transform: scale(0.8);
-				transform-origin: top;
+				@include scale(0.8, 0.8);
+				@include transform-origin(top, center);
 				top: 34px;
 				left: 14px;
 			}
 			@include desktop-width {
-				transform: scale(1);
+				@include scale(1,1);
 				top: 0;
 			}
 
 			.bg{
 				.round-square{
-					@include rotate(29.85deg);
+					@include scale-rotate(1.15,1.15, 29.85deg);
+
+					@include laptop-sm-width {
+						@include scale-rotate(1,1,29.85deg);
+						// @include rotate(29.85deg);
+					}
 				}
 
 				&.inview{
@@ -370,7 +458,11 @@
 
 		._info{
 			position: relative;
-			padding-top: 170px;
+			padding-top: 20px;
+
+			@include laptop-sm-width {
+				padding-top: 170px;
+			}
 
 			@include desktop-width {
 				left: 40px;
@@ -379,11 +471,23 @@
 
 			h3{
 				position: relative;
-				left: -4px;
+				@include laptop-sm-width {
+					left: -4px;
+				}
 			}
 
 			p{
-				width: 80%;
+				width: 100%;
+				max-width: 345px;
+				margin: 0 auto;
+				padding: 0 20px;
+
+				@include laptop-sm-width {
+					width: 80%;
+					max-width: unset;
+					margin: 0;
+					padding: 0;
+				}
 				@include desktop-width {
 					width: 100%;
 				}
@@ -400,24 +504,58 @@
 			margin-bottom: 90px;
 		}
 
+		._info{
+			position: relative;
+			padding-top: 50px;
+
+			@include laptop-sm-width {
+				padding-top: 90px;
+				left: 60px;
+			}
+
+			@include desktop-width {
+				left: 71px;
+			}
+
+			p{
+				max-width: 505px;
+				padding: 0 20px;
+				margin: 0 auto;
+
+				@include laptop-sm-width {
+					max-width: unset;
+					padding-left: 0;
+					padding-right: 20.6%;
+					margin: 0;
+				}
+			}
+		}
+
 		.illustration-wrap{
-			width: 591px;
-			height: 591px;
-				transform: scale(0.7);
-				transform-origin: top left;
-				top: 34px;
+			width: 290px;
+			height: 290px;
+			top: 34px;
+			margin: 60px auto 150px;
 
-				@include laptop-md-width {
-					transform: scale(0.8);
-					transform-origin: top;
-					left: 0;
-				}
+			@include laptop-sm-width {
+				width: 591px;
+				height: 591px;
+				@include scale(0.7,0.7);
+				@include transform-origin(top, left);
+				margin: 0;
+			}
 
-				@include desktop-width {
-					transform: scale(1);
-					top: 0;
-					left: 50px;
-				}
+			@include laptop-md-width {
+				transform: scale(0.8);
+				transform-origin: top;
+				left: 0;
+			}
+
+			@include desktop-width {
+				transform: scale(1);
+				top: 0;
+				left: 50px;
+			}
 
 			.bg{
 				#mid-dots{
@@ -429,55 +567,63 @@
 
 				.round-square{
 					position: absolute;
-					left: -5px;
-					// @include rotate(-12deg);
+
+					@include laptop-sm-width {
+						left: -5px;
+					}
 				}
 
 				&.inview{
 					#mid-dots, svg{
 						opacity: 0;
-						@include rotate(-32deg);
 						@include transitions-ease(1.4s);
+						@include scale-rotate(1.38,1.38, -32deg);
+
+						@include laptop-sm-width {
+							@include rotate(-32deg);
+						}
 					}
 
 					&.in-view{
 						#mid-dots, svg{
 							opacity: 1;
-							@include rotate(-12deg);
+							@include scale-rotate(1.38,1.38, -12deg);
+
+							@include laptop-sm-width {
+								@include rotate(-12deg);
+							}
 						}
 						#mid-dots{opacity: .8;}
 					}
 				}
 			}
 		}
+	}
 
-		._info{
-			position: relative;
-			padding-top: 90px;
-			left: 60px;
-
-			@include desktop-width {
-				left: 71px;
-			}
-
-			p{
-				padding-right: 20.6%;
-			}
+	._info{
+		text-align: center;
+		@include laptop-sm-width {
+			text-align: left;
 		}
 	}
 
 	.illustration-wrap{
 		position: relative;
-		left: 43px;
+		@include laptop-sm-width {
+			left: 43px;
+		}
 
 		.bg{
 			position: relative;
 			width: 100%;
 			height: 100%;
-			margin-top: 29px;
+			@include laptop-sm-width {
+				margin-top: 29px;
+			}
 
 			.round-square{
 				width: 100%;
+				vertical-align: top;
 			}
 		}
 
@@ -493,8 +639,13 @@
 				margin: auto;
 				top: 0; bottom: 0;
 				left: 0; right: 0;
-				width: 465px;
-				height: 465px;
+				width: 290px;
+				height: 290px;
+
+				@include laptop-sm-width {
+					width: 465px;
+					height: 465px;
+				}
 			}
 
 			.phone{
@@ -504,15 +655,32 @@
 				bottom: 0;
 				left: 0;
 				right: 2px;
-				width: 266px;
-				height: 465px;
+				width: 170px;
+				height: 300px;
+
+				@include laptop-sm-width {
+					width: 266px;
+					height: 465px;
+				}
+
+				.device{
+					width: 100%;
+					// @media (max-width: 991px) {
+					// 	width: 200px;
+					// }
+				}
 
 				.ui{
+						// display: none;
 					position: absolute;
 					margin: auto;
 					left: 0; right: 0;
 					top: 5.2%;
-					width: 174px;
+					width: 65%;
+
+					@include laptop-sm-width {
+						width: 174px;
+					}
 				}
 			}
 
@@ -525,9 +693,14 @@
 
 			.br-code{
 				width: 57px;
-				bottom: 164px;
-				right: 93px;
-				// opacity: .85;
+				bottom: 134px;
+				right: -15px;
+
+				@include laptop-sm-width {
+					right: 93px;
+					bottom: 164px;
+				}
+
 				&.inview{
 					opacity: 0;
 					@include scale(.6,.6);
@@ -541,10 +714,15 @@
 			}
 			.tr-code{
 				width: 59px;
-				top: 170px;
-				right: 150px;
-				// opacity: .3;
+				top: 260px;
+				right: 160px;
 				mix-blend-mode: soft-light;
+				
+				@include laptop-sm-width {
+					top: 170px;
+					right: 150px;
+				}
+
 				&.inview{
 					opacity: 0;
 					@include scale(.6,.6);
@@ -558,10 +736,14 @@
 			}
 			.left-code{
 				width: 82px;
-				left: 58px;
+				left: 30px;
 				bottom: 185px;
-				// opacity: .3;
 				mix-blend-mode: soft-light;
+				@include laptop-sm-width {
+					left: 58px;
+					bottom: 185px;
+				}
+
 				&.inview{
 					opacity: 0;
 					@include scale(.6,.6);
@@ -576,11 +758,17 @@
 
 			.sine-graph{
 				position: absolute;
-				left: 130px;
-				bottom: 130px;
-				width: 117px;
+				left: -10px;
+				bottom: 10px;
+				width: 100px;
 				@include blur(2px);
 				opacity: .5;
+
+				@include laptop-sm-width {
+					left: 130px;
+					bottom: 130px;
+					width: 117px;
+				}
 
 				img{
 					width: 100%;
@@ -601,12 +789,21 @@
 			.blurred-phone{
 				position: absolute;
 				margin: auto;
-				top: 80px;
+				top: 150px;
 				bottom: 0;
-				left: 30px;
+				left: 120px;
 				right: 0;
-				width: 161px;
+				width: 121px;
 				height: 311px;
+
+				@include laptop-sm-width {
+					top: 80px;
+					left: 30px;
+					width: 161px;
+					height: 311px;
+				}
+
+				img{width: 100%;}
 
 				&.inview{
 					opacity: 0;
@@ -622,9 +819,15 @@
 
 			.poly-graph{
 				position: absolute;
-				right: 117px;
-				bottom: 175px;
-				width: 186px;
+				right: -20px;
+				bottom: 200px;
+				width: 146px;
+
+				@include laptop-sm-width {
+					right: 117px;
+					bottom: 175px;
+					width: 186px;
+				}
 
 				img{width: 100%;}
 
@@ -642,10 +845,17 @@
 
 			.circle-graph{
 				position: absolute;
-				right: 61px;
-				bottom: 270px;
-				width: 110px;
-				height: 110px;
+				right: 0px;
+				bottom: 10px;
+				width: 70px;
+				height: 70px;
+
+				@include laptop-sm-width {
+					right: 61px;
+					bottom: 270px;
+					width: 110px;
+					height: 110px;
+				}
 
 				&:before{
 					content: '';
@@ -664,7 +874,12 @@
 					margin: auto;
 					top: 0; bottom: 0;
 					left: 0; right: 0;
+					width: 75%;
 					animation: dotsRing 8s ease-out infinite alternate;
+
+					@include laptop-sm-width {
+						width: auto;
+					}
 				}
 
 				&.inview{
@@ -681,10 +896,10 @@
 
 			.singers-graph{
 				position: absolute;
-				top: 134px;
-				left: -43px;
-				width: 373px;
-				height: 224px;
+				top: 54px;
+				left: -23px;
+				width: 260px;
+				height: 150px;
 				border-radius: 15px;
 				@include drawShadow(0, 15px, 35px, 0, rgba(0,0,0,.25));
 				background: #275cb1;
@@ -692,6 +907,13 @@
 				background: -webkit-linear-gradient(-52deg, #275cb1 0%,#123670 100%);
 				background: linear-gradient(128deg, #275cb1 0%,#123670 100%);
 				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#275cb1', endColorstr='#123670',GradientType=1 );
+				
+				@include laptop-sm-width {
+					top: 134px;
+					left: -43px;
+					width: 373px;
+					height: 224px;
+				}
 				
 				svg, .graphs{
 					position: absolute;
@@ -715,24 +937,49 @@
 						display: inline-block;
 
 						&.first{
-							top: 101px;
-							left: 51px;
+							top: 46px;
+							left: 10px;
+
+							@include laptop-sm-width {
+								top: 101px;
+								left: 51px;
+							}
 						}
 						&.second{
-							top: 18px;
-							left: 75px;
+							top: -18px;
+							left: 50px;
+
+							@include laptop-sm-width {
+								top: 18px;
+								left: 75px;
+							}
 						}
 						&.third{
-							top: 95px;
-							left: 129px;
+							top: 26px;
+							left: 100px;
+
+							@include laptop-sm-width {
+								top: 95px;
+								left: 129px;
+							}
 						}
 						&.fourth{
-							top: -14px;
-							right: 123px;
+							top: -34px;
+							right: 66px;
+
+							@include laptop-sm-width {
+								top: -14px;
+								right: 123px;
+							}
 						}
 						&.fifth{
-							top: 48px;
-							right: 47px;
+							top: 15px;
+							right: 7px;
+
+							@include laptop-sm-width {
+								top: 48px;
+								right: 47px;
+							}
 						}
 
 						._face{
@@ -860,15 +1107,21 @@
 
 		.album-covers{
 			position: absolute;
-			top: 107px;
+			top: 70px;
 			left: 50%;
 			@include translate(-50%, 0)
 			bottom: 0;
 			margin: auto;
-			width: 675px;
-			height: 120px;
+			width: 446px;
+			height: 74px;
 			@include flexIt;
 			list-style: none;
+
+			@include laptop-sm-width {
+				top: 107px;
+				width: 675px;
+				height: 120px;
+			}
 
 			.cover{
 				display: inline-block;
@@ -892,32 +1145,48 @@
 			margin: auto;
 			top: 0; bottom: 0;
 			left: 0; right: 0;
-			width: 465px;
-			height: 465px;
+			width: 290px;
+			height: 290px;
 			border-radius: 50%;
 			@include rotate(38deg);
 			animation: dayCycle 120s ease-out .4s infinite alternate;
+
+			@include laptop-sm-width {
+				width: 465px;
+				height: 465px;
+			}
 
 			.bubble{
 				position: absolute;
 				margin: auto;
 				top: 0; 
-				width: 64px;
-				height: 64px;
+				width: 40px;
+				height: 40px;
 				border-radius: 50%;
 				background-color: #fff;
 				@include drawShadow(0,12px, 35px,0, rgba(0,0,0,.25));
 				@include rotate(-38deg);
 				animation: dayCycleBubble 120s ease-out .4s infinite alternate;
 
+				@include laptop-sm-width {
+					width: 64px;
+					height: 64px;
+				}
+
 				&.day{
-					left: -30px;
+					left: -20px;
 					bottom: 0;
+					@include laptop-sm-width {
+						left: -30px;
+					}
 				}
 				&.night{
-					right: -30px;
-					
-					bottom: 42px;
+					right: -20px;
+					bottom: 15px;
+					@include laptop-sm-width {
+						right: -30px;
+						bottom: 42px;
+					}
 				}
 
 				figure{
@@ -928,10 +1197,15 @@
 				}
 
 				.sun{
-					width: 38px;
-					height: 38px;
+					width: 22px;
+					height: 22px;
 					border-radius: 50%;
 					background-color: $sun-color;
+
+					@include laptop-sm-width {
+						width: 38px;
+						height: 38px;
+					}
 
 					&:before, &:after{
 						content: '';
@@ -945,19 +1219,34 @@
 					}
 
 					&:before{
-						width: 19px;
-						height: 19px;
+						width: 13px;
+						height: 13px;
+						
+						@include laptop-sm-width {
+							width: 19px;
+							height: 19px;
+						}
 					}
 
 					&:after{
-						width: 29px;
-						height: 29px;
+						width: 19px;
+						height: 19px;
+						
+						@include laptop-sm-width {
+							width: 29px;
+							height: 29px;
+						}
 					}
 				}
 
 				.moon{
-					width: 43px;
-					height: 45px;
+					width: 26px;
+					height: 26px;
+
+					@include laptop-sm-width {
+						width: 43px;
+						height: 45px;
+					}
 
 					svg{
 						width: 100%;

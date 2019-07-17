@@ -10,6 +10,11 @@
 	cursor: pointer;
 	@include transitions-ease(.6s);
 
+	a{
+		text-decoration: none;
+		color: inherit;
+	}
+
 	.apple{
 		display: inline-block;
 		vertical-align: middle;

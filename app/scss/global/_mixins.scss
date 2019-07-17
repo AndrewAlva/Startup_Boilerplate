@@ -1,6 +1,13 @@
+$tablet-width: 768px;
 $laptop-sm-width: 992px;
 $laptop-md-width: 1200px;
 $desktop-width: 1441px;
+
+@mixin tablet-width{
+	@media (min-width: #{$tablet-width}) {
+		@content;
+	}
+}
 
 @mixin laptop-sm-width{
 	@media (min-width: #{$laptop-sm-width}) {
@@ -67,6 +74,15 @@ $desktop-width: 1441px;
 	-ms-transform: translate($Xmove, $Ymove) rotate($degs);
 	-o-transform: translate($Xmove, $Ymove) rotate($degs);
 	transform: translate($Xmove, $Ymove) rotate($degs);
+}
+
+@mixin scale-rotate($Xscale, $Yscale, $degs){
+	-webkit-transform: -webkit-scale($Xscale, $Yscale) -webkit-rotate($degs);
+	-webkit-transform: scale($Xscale, $Yscale) rotate($degs);
+	-moz-transform: scale($Xscale, $Yscale) rotate($degs);
+	-ms-transform: scale($Xscale, $Yscale) rotate($degs);
+	-o-transform: scale($Xscale, $Yscale) rotate($degs);
+	transform: scale($Xscale, $Yscale) rotate($degs);
 }
 
 @mixin scale($X, $Y){
@@ -183,5 +199,14 @@ $desktop-width: 1441px;
 	-webkit-flex-wrap: nowrap;
 	-ms-flex-wrap: nowrap;
 		flex-wrap: nowrap;
+}
+
+@mixin flexOrder($order){
+	$webkit-order: $order + 1;
+	-webkit-box-ordinal-group: $webkit-order;
+	-webkit-order: $order;
+	-moz-box-ordinal-group: $webkit-order;
+	-ms-flex-order: $order;
+	order: $order;
 }
 

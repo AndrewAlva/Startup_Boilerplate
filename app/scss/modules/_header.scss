@@ -1,14 +1,22 @@
 header{
 	z-index: 1;
 	position: absolute;
-	top: 18px;
-	left: 50px;
-	width: 185px;
-	height: 185px;
+	top: 10px;
+	left: 10px;
+	width: 90px;
+	height: 90px;
 	border-radius: 50%;
-	padding: 36px 0 42px;
+	padding: 15px 0 18px;
 	background-color: #fff;
 	text-align: center;
+
+	@include laptop-sm-width {
+		top: 18px;
+		left: 50px;
+		width: 185px;
+		height: 185px;
+		padding: 36px 0 42px;
+	}
 
 	@include desktop-width {
 		top: 36px;
@@ -21,12 +29,17 @@ header{
 	figure{
 		position: relative;
 		margin: 0 auto;
-		width: 88px;
-		height: 88px;
+		width: 42px;
+		height: 42px;
 		border-radius: 50%;
-		margin-bottom: 5px;
 		background-color: #007aff;
   		@include drawShadow(0px, 5px, 11px, 0px, rgba(16, 40, 77, 0.14));
+
+  		@include laptop-sm-width {
+  			width: 88px;
+  			height: 88px;
+  			margin-bottom: 5px;
+  		}
 
   		@include desktop-width {
   			margin-bottom: 18px;
@@ -34,17 +47,26 @@ header{
 
   		img{
   			position: absolute;
-  			top: 10px;
+  			top: 5px;
   			bottom: 0;
   			left: 0; right: 0;
   			margin: auto;
-  			width: 53px;
+  			width: 28px;
+
+  			@include laptop-sm-width {
+  				top: 10px;
+  				width: 53px;
+  			}
   		}
 	}
 
 	h1{
 		font-family: 'Gotham_Bold';
-		font-size: 1.08em;
+		font-size: .8em;
+
+		@include laptop-sm-width {
+			font-size: 1.08em;
+		}
 	}
 
 	&.inview{
